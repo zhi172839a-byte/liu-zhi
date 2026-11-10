@@ -331,13 +331,19 @@ window.TOOLBOX = {
    "desc": "开源远程桌面，可自建服务器",
    "tags": [
     "开源",
-    "远程"
+    "远程",
+    "国内源"
    ],
    "links": [
     {
      "label": "官网下载",
      "url": "https://rustdesk.com/",
      "primary": true
+    },
+    {
+     "label": "清华镜像",
+     "url": "https://mirrors.tuna.tsinghua.edu.cn/github-release/rustdesk/RustDesk/",
+     "primary": false
     }
    ],
    "cats": [
@@ -579,13 +585,19 @@ window.TOOLBOX = {
    "desc": "LaTeX 编辑器，语法高亮 + 补全",
    "tags": [
     "开源",
-    "编辑器"
+    "编辑器",
+    "国内源"
    ],
    "links": [
     {
      "label": "官网下载",
      "url": "https://www.texstudio.org/",
      "primary": true
+    },
+    {
+     "label": "清华镜像",
+     "url": "https://mirrors.tuna.tsinghua.edu.cn/github-release/texstudio-org/texstudio/",
+     "primary": false
     }
    ],
    "cats": [
@@ -846,13 +858,19 @@ window.TOOLBOX = {
    "desc": "conda 环境管理，默认 conda-forge 源",
    "tags": [
     "开源",
-    "Python"
+    "Python",
+    "国内源"
    ],
    "links": [
     {
      "label": "GitHub 下载",
      "url": "https://github.com/conda-forge/miniforge",
      "primary": true
+    },
+    {
+     "label": "清华 conda 镜像",
+     "url": "https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/conda-forge/",
+     "primary": false
     }
    ],
    "cats": [
@@ -927,13 +945,19 @@ window.TOOLBOX = {
    "desc": "版本控制，Windows 官方安装包",
    "tags": [
     "开源",
-    "版本控制"
+    "版本控制",
+    "国内源"
    ],
    "links": [
     {
      "label": "Windows 版下载",
      "url": "https://git-scm.com/download/win",
      "primary": true
+    },
+    {
+     "label": "清华镜像",
+     "url": "https://mirrors.tuna.tsinghua.edu.cn/github-release/git-for-windows/git/",
+     "primary": false
     }
    ],
    "cats": [
@@ -1618,13 +1642,19 @@ window.TOOLBOX = {
    "desc": "录屏、直播、推流的标准答案",
    "tags": [
     "开源",
-    "中文"
+    "中文",
+    "国内源"
    ],
    "links": [
     {
      "label": "官网下载",
      "url": "https://obsproject.com/",
      "primary": true
+    },
+    {
+     "label": "清华镜像",
+     "url": "https://mirrors.tuna.tsinghua.edu.cn/github-release/obsproject/obs-studio/",
+     "primary": false
     }
    ],
    "cats": [
@@ -2039,13 +2069,19 @@ window.TOOLBOX = {
    "desc": "一个 U 盘装多个系统镜像",
    "tags": [
     "开源",
-    "中文"
+    "中文",
+    "国内源"
    ],
    "links": [
     {
      "label": "官网下载",
      "url": "https://www.ventoy.net/",
      "primary": true
+    },
+    {
+     "label": "清华镜像",
+     "url": "https://mirrors.tuna.tsinghua.edu.cn/github-release/ventoy/Ventoy/",
+     "primary": false
     }
    ],
    "cats": [
@@ -2886,6 +2922,169 @@ window.TOOLBOX = {
      "label": "官网",
      "url": "https://codegeex.cn/",
      "primary": true
+    }
+   ]
+  },
+  {
+   "name": "Python",
+   "cats": [
+    "05"
+   ],
+   "icon": "🐍",
+   "desc": "官方 Python 解释器，Windows 安装包",
+   "tags": [
+    "免费",
+    "中文",
+    "国内源"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://www.python.org/downloads/windows/"
+    },
+    {
+     "label": "华为镜像",
+     "url": "https://mirrors.huaweicloud.com/python/"
+    }
+   ]
+  },
+  {
+   "name": "Node.js",
+   "cats": [
+    "05"
+   ],
+   "icon": "🟢",
+   "desc": "JavaScript 运行时，装前端环境必备",
+   "tags": [
+    "开源",
+    "中文",
+    "国内源"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://nodejs.org/zh-cn/download"
+    },
+    {
+     "label": "清华镜像",
+     "url": "https://mirrors.tuna.tsinghua.edu.cn/nodejs-release/"
+    }
+   ]
+  },
+  {
+   "name": "Miniconda",
+   "cats": [
+    "05"
+   ],
+   "icon": "🐍",
+   "desc": "轻量版 conda，装 Python 环境最省事",
+   "tags": [
+    "免费",
+    "国内源"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://docs.conda.io/en/latest/miniconda.html"
+    },
+    {
+     "label": "清华镜像",
+     "url": "https://mirrors.tuna.tsinghua.edu.cn/anaconda/miniconda/"
+    }
+   ]
+  },
+  {
+   "name": "PyCharm 社区版",
+   "cats": [
+    "05"
+   ],
+   "icon": "🧠",
+   "desc": "Python 专用 IDE，社区版免费够用",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://www.jetbrains.com/pycharm/download/"
+    }
+   ]
+  },
+  {
+   "name": "IntelliJ IDEA 社区版",
+   "cats": [
+    "05"
+   ],
+   "icon": "☕",
+   "desc": "Java 开发首选，社区版免费",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://www.jetbrains.com/idea/download/"
+    }
+   ]
+  },
+  {
+   "name": "JetBrains Toolbox",
+   "cats": [
+    "05"
+   ],
+   "icon": "🧰",
+   "desc": "一站式安装和更新 PyCharm / IDEA 全家桶",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://www.jetbrains.com/toolbox-app/"
+    }
+   ]
+  },
+  {
+   "name": "Anaconda",
+   "cats": [
+    "05"
+   ],
+   "icon": "🐍",
+   "desc": "数据科学全家桶：Python + 几百个库",
+   "tags": [
+    "免费",
+    "中文",
+    "国内源"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://www.anaconda.com/download"
+    },
+    {
+     "label": "清华镜像",
+     "url": "https://mirrors.tuna.tsinghua.edu.cn/anaconda/archive/"
+    }
+   ]
+  },
+  {
+   "name": "Visual Studio 社区版",
+   "cats": [
+    "05"
+   ],
+   "icon": "🟣",
+   "desc": "C++ / C# 开发，微软免费版",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://visualstudio.microsoft.com/zh-hans/downloads/"
     }
    ]
   }

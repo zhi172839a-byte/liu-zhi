@@ -281,7 +281,10 @@
       ? '<button class="chip more" type="button" data-more="1" data-rest="' + rest.length + '" aria-expanded="false">+' + rest.length + " 个版本</button>"
       : "";
 
-    var tags = (app.tags || []).map(function (t) { return '<span class="tag">' + esc(t) + "</span>"; }).join("");
+    var tags = (app.tags || []).map(function (t) {
+      var cls = t === "国内源" ? "tag src" : "tag";
+      return '<span class="' + cls + '">' + esc(t) + "</span>";
+    }).join("");
     var hotTag = app.hot ? '<span class="tag hot">🔥 热门</span>' : "";
     var catTags = cats.slice(0, 2).map(function (cid) {
       return CAT[cid] ? '<span class="tag cat">' + esc(CAT[cid].name) + "</span>" : "";
@@ -498,7 +501,7 @@
 
   /* ---------- 热门关键词 ---------- */
 
-  var HOT = ["清理C盘", "截图", "播放", "PDF合并", "手机传文件", "剪视频", "杀毒", "密码", "看图", "远程"];
+  var HOT = ["镜像", "清理C盘", "截图", "播放", "PDF合并", "手机传文件", "剪视频", "杀毒", "密码", "看图"];
 
   hotEl.innerHTML = '<span class="hot-label">试试：</span>' +
     HOT.map(function (k) { return '<button class="hot-chip" type="button" data-hot="' + esc(k) + '">' + esc(k) + "</button>"; }).join("");
@@ -514,6 +517,30 @@
   });
 
   /* ---------- 事件 ---------- */
+
+  /* 页面里的快捷入口（国内镜像搜索 / AI 专栏 / 新机开荒） */
+  document.addEventListener("click", function (e) {
+    var qj = e.target.closest("[data-q]");
+    if (qj) {
+      var v = qj.getAttribute("data-q");
+      qEl.value = v;
+      state.q = v;
+      state.view = "all";
+      toggleClear();
+      render();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+      return;
+    }
+
+    var jump = e.target.closest("[data-jump]");
+    if (!jump) return;
+    state.view = jump.getAttribute("data-jump");
+    state.q = "";
+    qEl.value = "";
+    toggleClear();
+    render();
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 
   navEl.addEventListener("click", function (e) {
     var btn = e.target.closest("[data-view]");

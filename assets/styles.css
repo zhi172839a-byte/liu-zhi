@@ -1365,3 +1365,37 @@ body.sheet-open { overflow: hidden; }
   line-height: 1;
   filter: drop-shadow(0 1px 2px rgba(0, 0, 0, .25));
 }
+/* ---------- 国内源标签 ---------- */
+.tag.src {
+  color: #16a34a;
+  background: color-mix(in srgb, #22c55e 12%, transparent);
+  border-color: color-mix(in srgb, #22c55e 26%, transparent);
+  font-weight: 600;
+}
+/* ---------- 快捷入口 ---------- */
+.quick { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+.quick-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 13px;
+  border-radius: 11px;
+  border: 1px solid color-mix(in srgb, var(--brand) 25%, var(--line));
+  background: color-mix(in srgb, var(--brand) 7%, var(--card));
+  color: color-mix(in srgb, var(--brand) 70%, var(--text));
+  font: inherit;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform .15s ease, background .15s ease, border-color .15s ease;
+}
+.quick-btn:hover {
+  transform: translateY(-1px);
+  background: color-mix(in srgb, var(--brand) 13%, var(--card));
+  border-color: color-mix(in srgb, var(--brand) 45%, var(--line));
+}
+.qb-ico { font-size: 13px; }
+@media (max-width: 560px) {
+  .quick { gap: 6px; margin-top: 12px; }
+  .quick-btn { font-size: 11.5px; padding: 7px 10px; }
+}
