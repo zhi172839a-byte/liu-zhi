@@ -282,6 +282,7 @@
       : "";
 
     var tags = (app.tags || []).map(function (t) { return '<span class="tag">' + esc(t) + "</span>"; }).join("");
+    var hotTag = app.hot ? '<span class="tag hot">🔥 热门</span>' : "";
     var catTags = cats.slice(0, 2).map(function (cid) {
       return CAT[cid] ? '<span class="tag cat">' + esc(CAT[cid].name) + "</span>" : "";
     }).join("");
@@ -291,7 +292,7 @@
         '<div class="card-top">' +
           '<div class="tile" aria-hidden="true">' + (app.icon || "📦") + "</div>" +
           '<div class="card-meta"><h3 title="' + esc(app.name) + '">' + hl(app.name, q) + "</h3>" +
-            '<div class="tags">' + catTags + tags + "</div>" +
+            '<div class="tags">' + catTags + hotTag + tags + "</div>" +
           "</div>" +
         "</div>" +
         '<p class="desc">' + hl(app.desc || "", q) + "</p>" +
@@ -309,7 +310,7 @@
     var cats = app.cats || [];
     var c = CAT[cats[0]] || { color: "#4f7cff" };
     return '<button class="appcell" type="button" data-app="' + esc(app.name) + '" style="--c:' + esc(c.color) + '">' +
-      '<span class="cell-icon">' + (app.icon || "📦") + "</span>" +
+      '<span class="cell-icon">' + (app.icon || "📦") + (app.hot ? '<span class="cell-hot">🔥</span>' : "") + "</span>" +
       '<span class="cell-name">' + esc(app.name) + "</span>" +
     "</button>";
   }

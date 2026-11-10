@@ -49,6 +49,50 @@ window.TOOLBOX = {
    ]
   },
   {
+   "id": "40",
+   "name": "AI 对话",
+   "desc": "聊天问答、写作、推理",
+   "color": "#7c3aed",
+   "kws": [
+    "对话",
+    "写作",
+    "推理"
+   ]
+  },
+  {
+   "id": "41",
+   "name": "AI 搜索",
+   "desc": "带总结和出处的搜索",
+   "color": "#4f46e5",
+   "kws": [
+    "搜索",
+    "总结",
+    "资料"
+   ]
+  },
+  {
+   "id": "42",
+   "name": "AI 绘画视频",
+   "desc": "文生图、文生视频",
+   "color": "#db2777",
+   "kws": [
+    "绘画",
+    "视频",
+    "生图"
+   ]
+  },
+  {
+   "id": "43",
+   "name": "AI 办公效率",
+   "desc": "转写、写作、编程助手",
+   "color": "#0891b2",
+   "kws": [
+    "转写",
+    "办公",
+    "编程"
+   ]
+  },
+  {
    "id": "00",
    "name": "装机必备",
    "desc": "装机先装的四件套",
@@ -207,7 +251,7 @@ window.TOOLBOX = {
   },
   {
    "id": "13",
-   "name": "AI 工具",
+   "name": "AI 客户端",
    "desc": "接 API 的桌面 AI 工具",
    "color": "#6366f1",
    "kws": [
@@ -1475,7 +1519,8 @@ window.TOOLBOX = {
    ],
    "cats": [
     "13"
-   ]
+   ],
+   "hot": true
   },
   {
    "name": "Cherry Studio",
@@ -1525,7 +1570,8 @@ window.TOOLBOX = {
    ],
    "cats": [
     "13"
-   ]
+   ],
+   "hot": true
   },
   {
    "name": "ShareX",
@@ -2422,6 +2468,426 @@ window.TOOLBOX = {
      "primary": true
     }
    ]
+  },
+  {
+   "name": "DeepSeek",
+   "cats": [
+    "40"
+   ],
+   "icon": "🐋",
+   "desc": "推理和大模型，免费且国内直连",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "hot": true,
+   "links": [
+    {
+     "label": "官网",
+     "url": "https://www.deepseek.com/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "豆包",
+   "cats": [
+    "40"
+   ],
+   "icon": "🫘",
+   "desc": "字节出品，日常问答和写作最顺手",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "hot": true,
+   "links": [
+    {
+     "label": "官网",
+     "url": "https://www.doubao.com/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "Kimi",
+   "cats": [
+    "40"
+   ],
+   "icon": "🌙",
+   "desc": "长文档、长网页直接丢进去问",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "hot": true,
+   "links": [
+    {
+     "label": "官网",
+     "url": "https://kimi.moonshot.cn/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "通义千问",
+   "cats": [
+    "40"
+   ],
+   "icon": "☁️",
+   "desc": "阿里出品，中文和多模态都强",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "hot": true,
+   "links": [
+    {
+     "label": "官网",
+     "url": "https://tongyi.aliyun.com/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "文心一言",
+   "cats": [
+    "40"
+   ],
+   "icon": "🧠",
+   "desc": "百度出品，生态接得最广",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "hot": true,
+   "links": [
+    {
+     "label": "官网",
+     "url": "https://yiyan.baidu.com/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "智谱清言",
+   "cats": [
+    "40"
+   ],
+   "icon": "🧪",
+   "desc": "清华系 GLM，代码和推理不错",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "hot": true,
+   "links": [
+    {
+     "label": "官网",
+     "url": "https://chatglm.cn/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "腾讯元宝",
+   "cats": [
+    "40"
+   ],
+   "icon": "💰",
+   "desc": "接混元和 DeepSeek，微信生态友好",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "hot": true,
+   "links": [
+    {
+     "label": "官网",
+     "url": "https://yuanbao.tencent.com/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "讯飞星火",
+   "cats": [
+    "40"
+   ],
+   "icon": "✨",
+   "desc": "语音交互是强项",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "hot": true,
+   "links": [
+    {
+     "label": "官网",
+     "url": "https://xinghuo.xfyun.cn/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "天工 AI",
+   "cats": [
+    "40"
+   ],
+   "icon": "🌤️",
+   "desc": "昆仑万维，搜索对话一体",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "hot": true,
+   "links": [
+    {
+     "label": "官网",
+     "url": "https://www.tiangong.cn/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "秘塔 AI 搜索",
+   "cats": [
+    "41"
+   ],
+   "icon": "🔍",
+   "desc": "没有广告，答案带出处",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "hot": true,
+   "links": [
+    {
+     "label": "官网",
+     "url": "https://metaso.cn/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "纳米 AI 搜索",
+   "cats": [
+    "41"
+   ],
+   "icon": "🧭",
+   "desc": "360 出品，支持多模型",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "hot": true,
+   "links": [
+    {
+     "label": "官网",
+     "url": "https://www.n.cn/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "夸克",
+   "cats": [
+    "41"
+   ],
+   "icon": "⚡",
+   "desc": "AI 搜索 + 网盘 + 扫描，一套",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "hot": true,
+   "links": [
+    {
+     "label": "官网",
+     "url": "https://www.quark.cn/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "即梦 AI",
+   "cats": [
+    "42"
+   ],
+   "icon": "🎨",
+   "desc": "字节的 AI 生图和生视频",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "hot": true,
+   "links": [
+    {
+     "label": "官网",
+     "url": "https://jimeng.jianying.com/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "可灵 AI",
+   "cats": [
+    "42"
+   ],
+   "icon": "🎬",
+   "desc": "快手出品，国内最能打的视频生成",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "hot": true,
+   "links": [
+    {
+     "label": "官网",
+     "url": "https://klingai.kuaishou.com/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "通义万相",
+   "cats": [
+    "42"
+   ],
+   "icon": "🖌️",
+   "desc": "阿里的文生图 / 视频",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "hot": true,
+   "links": [
+    {
+     "label": "官网",
+     "url": "https://tongyi.aliyun.com/wanxiang/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "剪映",
+   "cats": [
+    "42"
+   ],
+   "icon": "✂️",
+   "desc": "带 AI 字幕、抠像、成片，剪视频首选",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "hot": true,
+   "links": [
+    {
+     "label": "官网",
+     "url": "https://www.capcut.cn/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "通义听悟",
+   "cats": [
+    "43"
+   ],
+   "icon": "🎧",
+   "desc": "录音转文字、会议纪要自动整理",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "hot": true,
+   "links": [
+    {
+     "label": "官网",
+     "url": "https://tingwu.aliyun.com/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "讯飞听见",
+   "cats": [
+    "43"
+   ],
+   "icon": "📝",
+   "desc": "语音转写老牌，准确率高",
+   "tags": [
+    "付费",
+    "中文"
+   ],
+   "hot": true,
+   "links": [
+    {
+     "label": "官网",
+     "url": "https://www.iflyrec.com/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "腾讯 ima",
+   "cats": [
+    "43"
+   ],
+   "icon": "📚",
+   "desc": "把资料丢进去建自己的知识库",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "hot": true,
+   "links": [
+    {
+     "label": "官网",
+     "url": "https://ima.qq.com/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "通义灵码",
+   "cats": [
+    "43"
+   ],
+   "icon": "💻",
+   "desc": "IDE 里的 AI 编程助手",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "hot": true,
+   "links": [
+    {
+     "label": "官网",
+     "url": "https://lingma.aliyun.com/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "CodeGeeX",
+   "cats": [
+    "43"
+   ],
+   "icon": "⌨️",
+   "desc": "智谱的代码助手，支持多语言",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "hot": true,
+   "links": [
+    {
+     "label": "官网",
+     "url": "https://codegeex.cn/",
+     "primary": true
+    }
+   ]
   }
  ],
  "groups": [
@@ -2435,6 +2901,19 @@ window.TOOLBOX = {
     "31",
     "32",
     "33"
+   ]
+  },
+  {
+   "id": "gAI",
+   "name": "AI 专栏",
+   "desc": "国内直接用，不用梯子",
+   "color": "#7c3aed",
+   "cats": [
+    "40",
+    "41",
+    "42",
+    "43",
+    "13"
    ]
   },
   {
