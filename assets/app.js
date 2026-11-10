@@ -110,10 +110,10 @@
 
   /* ---------- 渲染 ---------- */
 
-  function navItem(id, label, count, color) {
+  function navItem(id, label, count, color, tip) {
     var active = state.view === id ? " is-active" : "";
     return (
-      '<button class="nav-item' + active + '" type="button" data-view="' + id + '">' +
+      '<button class="nav-item' + active + '" type="button" data-view="' + id + '"' + (tip ? ' title="' + esc(tip) + '"' : "") + ">" +
         '<span class="nav-dot" style="--c:' + color + '"></span>' +
         '<span class="nav-label">' + esc(label) + "</span>" +
         '<span class="nav-count">' + count + "</span>" +
@@ -122,10 +122,11 @@
   }
 
   function renderNav() {
-    var html = navItem("all", "全部软件", APPS.length, "#4f7cff");
+    var html = navItem("all", "全部软件", APPS.length, "#4f7cff", "所有分类");
     html += '<div class="nav-sep"></div>';
     CATS.forEach(function (c) {
-      html += navItem(c.id, c.name, countByCat(c.id), c.color);
+      var tip = (c.desc || "") + ((c.kws || []).length ? " · " + c.kws.join(" · ") : "");
+      html += navItem(c.id, c.name, countByCat(c.id), c.color, tip);
     });
     navEl.innerHTML = html;
   }
@@ -142,8 +143,7 @@
     document.getElementById("stats").innerHTML =
       '<span class="stat"><b>' + APPS.length + "</b> 款软件</span>" +
       '<span class="stat"><b>' + linkCount + "</b> 个官方链接</span>" +
-      '<span class="stat"><b>' + CATS.length + "</b> 个分类</span>" +
-      '<span class="stat">全部免费 / 开源 · 无需破解</span>';
+      '<span class="stat"><b>' + CATS.length + "</b> 个分类</span>";
     document.getElementById("footApps").textContent = APPS.length;
     document.getElementById("footLinks").textContent = linkCount;
   }
@@ -159,10 +159,11 @@
       var sections = CATS.map(function (c) {
         var items = list.filter(function (a) { return a.cat === c.id; });
         if (!items.length) return "";
+        var kws = (c.kws || []).map(function (k) { return '<span class="kw">' + esc(k) + "</span>"; }).join("");
         return (
           '<section class="section" style="--c:' + c.color + '">' +
             '<div class="section-head"><h2>' + esc(c.name) + "</h2>" +
-              '<span class="sec-desc">' + esc(c.desc) + "</span>" +
+              '<span class="kws">' + kws + "</span>" +
               '<span class="sec-count">' + items.length + "</span>" +
             "</div>" +
             '<div class="grid">' + items.map(cardHTML).join("") + "</div>" +

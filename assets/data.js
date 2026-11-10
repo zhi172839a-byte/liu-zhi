@@ -5,73 +5,130 @@ window.TOOLBOX = {
    "id": "00",
    "name": "装机必备",
    "desc": "装机先装的四件套",
-   "color": "#4f7cff"
+   "color": "#4f7cff",
+   "kws": [
+    "解压",
+    "搜索",
+    "远程",
+    "排查"
+   ]
   },
   {
    "id": "01",
    "name": "文献笔记",
    "desc": "查文献、管 PDF、做笔记",
-   "color": "#8b5cf6"
+   "color": "#8b5cf6",
+   "kws": [
+    "文献库",
+    "PDF",
+    "笔记"
+   ]
   },
   {
    "id": "02",
    "name": "论文排版",
    "desc": "LaTeX / Typst 一条龙",
-   "color": "#0ea5e9"
+   "color": "#0ea5e9",
+   "kws": [
+    "LaTeX",
+    "公式",
+    "格式转换"
+   ]
   },
   {
    "id": "03",
    "name": "绘图设计",
    "desc": "矢量图、位图、流程图",
-   "color": "#ec4899"
+   "color": "#ec4899",
+   "kws": [
+    "矢量",
+    "位图",
+    "流程图"
+   ]
   },
   {
    "id": "04",
    "name": "科学计算",
    "desc": "科学计算与统计分析",
-   "color": "#f59e0b"
+   "color": "#f59e0b",
+   "kws": [
+    "数值",
+    "统计",
+    "仿真"
+   ]
   },
   {
    "id": "05",
    "name": "编程开发",
    "desc": "写代码、管版本",
-   "color": "#10b981"
+   "color": "#10b981",
+   "kws": [
+    "编辑器",
+    "版本控制"
+   ]
   },
   {
    "id": "06",
    "name": "影音三维",
    "desc": "音频、3D、动画",
-   "color": "#ef4444"
+   "color": "#ef4444",
+   "kws": [
+    "音频",
+    "3D",
+    "渲染"
+   ]
   },
   {
    "id": "07",
    "name": "办公字体",
    "desc": "文档表格与中文字体",
-   "color": "#06b6d4"
+   "color": "#06b6d4",
+   "kws": [
+    "文档",
+    "表格",
+    "字体"
+   ]
   },
   {
    "id": "10",
    "name": "卸载清理",
    "desc": "卸载、清理、查启动项",
-   "color": "#64748b"
+   "color": "#64748b",
+   "kws": [
+    "卸载",
+    "清理",
+    "启动项"
+   ]
   },
   {
    "id": "11",
    "name": "系统工具",
    "desc": "让 Windows 好用一点",
-   "color": "#14b8a6"
+   "color": "#14b8a6",
+   "kws": [
+    "效率",
+    "监控"
+   ]
   },
   {
    "id": "12",
    "name": "运行库",
    "desc": "装软件报错缺 DLL 时用",
-   "color": "#f97316"
+   "color": "#f97316",
+   "kws": [
+    "DLL",
+    "运行时"
+   ]
   },
   {
    "id": "13",
    "name": "AI 工具",
    "desc": "接 API 的桌面 AI 工具",
-   "color": "#6366f1"
+   "color": "#6366f1",
+   "kws": [
+    "对话",
+    "本地模型"
+   ]
   }
  ],
  "apps": [
@@ -81,7 +138,9 @@ window.TOOLBOX = {
    "icon": "📦",
    "desc": "免费开源压缩解压，7z / zip / rar 解压都能开",
    "tags": [
-    "开源"
+    "开源",
+    "中文",
+    "轻量"
    ],
    "links": [
     {
@@ -97,7 +156,9 @@ window.TOOLBOX = {
    "icon": "🔎",
    "desc": "秒级全盘文件名搜索，装机必备",
    "tags": [
-    "免费"
+    "免费",
+    "中文",
+    "极速搜索"
    ],
    "links": [
     {
@@ -123,7 +184,8 @@ window.TOOLBOX = {
    "icon": "🖥️",
    "desc": "开源远程桌面，可自建服务器",
    "tags": [
-    "开源"
+    "开源",
+    "远程"
    ],
    "links": [
     {
@@ -139,7 +201,8 @@ window.TOOLBOX = {
    "icon": "🧰",
    "desc": "微软官方系统排查工具全家桶",
    "tags": [
-    "微软官方"
+    "微软官方",
+    "免安装"
    ],
    "links": [
     {
@@ -165,7 +228,9 @@ window.TOOLBOX = {
    "icon": "📖",
    "desc": "电子书管理 / 转换 / 阅读一条龙",
    "tags": [
-    "开源"
+    "开源",
+    "中文",
+    "电子书"
    ],
    "links": [
     {
@@ -181,7 +246,8 @@ window.TOOLBOX = {
    "icon": "📑",
    "desc": "BibTeX 文献库管理，写论文配 LaTeX",
    "tags": [
-    "开源"
+    "开源",
+    "文献"
    ],
    "links": [
     {
@@ -197,7 +263,9 @@ window.TOOLBOX = {
    "icon": "🗒️",
    "desc": "本地 Markdown 笔记，双向链接",
    "tags": [
-    "免费"
+    "免费",
+    "中文",
+    "笔记"
    ],
    "links": [
     {
@@ -238,7 +306,9 @@ window.TOOLBOX = {
    "icon": "📚",
    "desc": "文献管理，网页一键抓取，插件生态强",
    "tags": [
-    "免费"
+    "免费",
+    "中文",
+    "文献"
    ],
    "links": [
     {
@@ -269,7 +339,8 @@ window.TOOLBOX = {
    "icon": "📐",
    "desc": "所见即所得的 LaTeX 编辑器",
    "tags": [
-    "开源"
+    "开源",
+    "排版"
    ],
    "links": [
     {
@@ -285,7 +356,8 @@ window.TOOLBOX = {
    "icon": "📜",
    "desc": "按需安装的轻量 LaTeX 发行版",
    "tags": [
-    "免费"
+    "免费",
+    "排版"
    ],
    "links": [
     {
@@ -301,7 +373,8 @@ window.TOOLBOX = {
    "icon": "🔁",
    "desc": "万能文档格式转换：md / docx / pdf / html",
    "tags": [
-    "开源"
+    "开源",
+    "格式转换"
    ],
    "links": [
     {
@@ -317,7 +390,8 @@ window.TOOLBOX = {
    "icon": "🧾",
    "desc": "完整 LaTeX 发行版，一次装全",
    "tags": [
-    "开源"
+    "开源",
+    "排版"
    ],
    "links": [
     {
@@ -338,7 +412,8 @@ window.TOOLBOX = {
    "icon": "✍️",
    "desc": "LaTeX 编辑器，语法高亮 + 补全",
    "tags": [
-    "开源"
+    "开源",
+    "编辑器"
    ],
    "links": [
     {
@@ -354,7 +429,8 @@ window.TOOLBOX = {
    "icon": "📄",
    "desc": "新一代排版系统，编译飞快",
    "tags": [
-    "开源"
+    "开源",
+    "排版"
    ],
    "links": [
     {
@@ -370,7 +446,8 @@ window.TOOLBOX = {
    "icon": "🗺️",
    "desc": "轻量流程图与示意图工具",
    "tags": [
-    "开源"
+    "开源",
+    "轻量"
    ],
    "links": [
     {
@@ -386,7 +463,8 @@ window.TOOLBOX = {
    "icon": "📊",
    "desc": "流程图 / 架构图，网页版免登录",
    "tags": [
-    "免费"
+    "免费",
+    "在线"
    ],
    "links": [
     {
@@ -402,7 +480,9 @@ window.TOOLBOX = {
    "icon": "🖼️",
    "desc": "开源图像处理，PS 的免费替代",
    "tags": [
-    "开源"
+    "开源",
+    "中文",
+    "位图"
    ],
    "links": [
     {
@@ -433,7 +513,9 @@ window.TOOLBOX = {
    "icon": "🖋️",
    "desc": "开源矢量绘图，SVG 全能选手",
    "tags": [
-    "开源"
+    "开源",
+    "中文",
+    "矢量"
    ],
    "links": [
     {
@@ -469,7 +551,9 @@ window.TOOLBOX = {
    "icon": "🎨",
    "desc": "数字绘画 / 插画 / 概念图",
    "tags": [
-    "开源"
+    "开源",
+    "中文",
+    "绘画"
    ],
    "links": [
     {
@@ -485,7 +569,8 @@ window.TOOLBOX = {
    "icon": "📰",
    "desc": "开源排版：画册、海报、刊物",
    "tags": [
-    "开源"
+    "开源",
+    "排版"
    ],
    "links": [
     {
@@ -501,7 +586,9 @@ window.TOOLBOX = {
    "icon": "📏",
    "desc": "数学可视化：几何、函数、3D",
    "tags": [
-    "免费"
+    "免费",
+    "中文",
+    "数学"
    ],
    "links": [
     {
@@ -517,7 +604,8 @@ window.TOOLBOX = {
    "icon": "📈",
    "desc": "MATLAB 兼容的数值计算环境",
    "tags": [
-    "开源"
+    "开源",
+    "MATLAB"
    ],
    "links": [
     {
@@ -533,7 +621,8 @@ window.TOOLBOX = {
    "icon": "🧮",
    "desc": "高性能科学计算语言",
    "tags": [
-    "开源"
+    "开源",
+    "高性能"
    ],
    "links": [
     {
@@ -549,7 +638,8 @@ window.TOOLBOX = {
    "icon": "🔣",
    "desc": "计算机代数系统，符号运算",
    "tags": [
-    "开源"
+    "开源",
+    "符号运算"
    ],
    "links": [
     {
@@ -565,7 +655,8 @@ window.TOOLBOX = {
    "icon": "🐍",
    "desc": "conda 环境管理，默认 conda-forge 源",
    "tags": [
-    "开源"
+    "开源",
+    "Python"
    ],
    "links": [
     {
@@ -581,7 +672,8 @@ window.TOOLBOX = {
    "icon": "📊",
    "desc": "统计分析的标配，配 RStudio 用",
    "tags": [
-    "开源"
+    "开源",
+    "统计"
    ],
    "links": [
     {
@@ -602,7 +694,8 @@ window.TOOLBOX = {
    "icon": "📉",
    "desc": "开源数值计算与仿真",
    "tags": [
-    "开源"
+    "开源",
+    "仿真"
    ],
    "links": [
     {
@@ -618,7 +711,8 @@ window.TOOLBOX = {
    "icon": "🕷️",
    "desc": "Python 科学计算 IDE",
    "tags": [
-    "开源"
+    "开源",
+    "Python"
    ],
    "links": [
     {
@@ -634,7 +728,8 @@ window.TOOLBOX = {
    "icon": "🌿",
    "desc": "版本控制，Windows 官方安装包",
    "tags": [
-    "开源"
+    "开源",
+    "版本控制"
    ],
    "links": [
     {
@@ -650,7 +745,8 @@ window.TOOLBOX = {
    "icon": "🐙",
    "desc": "图形化 Git 客户端，少敲命令",
    "tags": [
-    "免费"
+    "免费",
+    "Git"
    ],
    "links": [
     {
@@ -666,7 +762,9 @@ window.TOOLBOX = {
    "icon": "💻",
    "desc": "主力代码编辑器，插件生态最大",
    "tags": [
-    "免费"
+    "免费",
+    "中文",
+    "编辑器"
    ],
    "links": [
     {
@@ -712,7 +810,8 @@ window.TOOLBOX = {
    "icon": "🎚️",
    "desc": "开源数字音频工作站（DAW）",
    "tags": [
-    "开源"
+    "开源",
+    "DAW"
    ],
    "links": [
     {
@@ -728,7 +827,9 @@ window.TOOLBOX = {
    "icon": "🎧",
    "desc": "音频录制 / 剪辑 / 降噪",
    "tags": [
-    "开源"
+    "开源",
+    "中文",
+    "音频"
    ],
    "links": [
     {
@@ -744,7 +845,9 @@ window.TOOLBOX = {
    "icon": "🎬",
    "desc": "开源 3D 建模 / 渲染 / 动画",
    "tags": [
-    "开源"
+    "开源",
+    "中文",
+    "3D"
    ],
    "links": [
     {
@@ -790,7 +893,9 @@ window.TOOLBOX = {
    "icon": "📝",
    "desc": "免费办公套件，兼容 Office 格式",
    "tags": [
-    "开源"
+    "开源",
+    "中文",
+    "办公"
    ],
    "links": [
     {
@@ -806,7 +911,9 @@ window.TOOLBOX = {
    "icon": "📋",
    "desc": "兼容性好的办公套件，界面像 Office",
    "tags": [
-    "免费"
+    "免费",
+    "中文",
+    "办公"
    ],
    "links": [
     {
@@ -822,7 +929,9 @@ window.TOOLBOX = {
    "icon": "🔡",
    "desc": "开源中文宋体，正文排版常用",
    "tags": [
-    "开源"
+    "开源",
+    "中文",
+    "字体"
    ],
    "links": [
     {
@@ -838,7 +947,9 @@ window.TOOLBOX = {
    "icon": "🔠",
    "desc": "Adobe / Google 开源中文字体，无衬线",
    "tags": [
-    "开源"
+    "开源",
+    "中文",
+    "字体"
    ],
    "links": [
     {
@@ -854,7 +965,8 @@ window.TOOLBOX = {
    "icon": "🚦",
    "desc": "开机自启动项全排查（微软官方）",
    "tags": [
-    "微软官方"
+    "微软官方",
+    "启动项"
    ],
    "links": [
     {
@@ -870,7 +982,8 @@ window.TOOLBOX = {
    "icon": "🧼",
    "desc": "开源系统垃圾清理",
    "tags": [
-    "开源"
+    "开源",
+    "清理"
    ],
    "links": [
     {
@@ -886,7 +999,9 @@ window.TOOLBOX = {
    "icon": "🧽",
    "desc": "轻量卸载工具，单文件免安装",
    "tags": [
-    "免费"
+    "免费",
+    "中文",
+    "绿色"
    ],
    "links": [
     {
@@ -902,7 +1017,9 @@ window.TOOLBOX = {
    "icon": "🧹",
    "desc": "深度卸载 + 残留注册表清理",
    "tags": [
-    "免费"
+    "免费",
+    "中文",
+    "卸载"
    ],
    "links": [
     {
@@ -918,7 +1035,8 @@ window.TOOLBOX = {
    "icon": "🛡️",
    "desc": "一键关掉 Windows 遥测与隐私项",
    "tags": [
-    "免费"
+    "免费",
+    "隐私"
    ],
    "links": [
     {
@@ -934,7 +1052,8 @@ window.TOOLBOX = {
    "icon": "🧭",
    "desc": "加强版任务管理器（微软官方）",
    "tags": [
-    "微软官方"
+    "微软官方",
+    "进程"
    ],
    "links": [
     {
@@ -950,7 +1069,9 @@ window.TOOLBOX = {
    "icon": "⚡",
    "desc": "微软官方效率工具集：窗口、取色、批量改名",
    "tags": [
-    "微软官方"
+    "微软官方",
+    "中文",
+    "效率"
    ],
    "links": [
     {
@@ -981,7 +1102,9 @@ window.TOOLBOX = {
    "icon": "📶",
    "desc": "任务栏网速 / CPU / 内存监控",
    "tags": [
-    "开源"
+    "开源",
+    "中文",
+    "监控"
    ],
    "links": [
     {
@@ -1032,7 +1155,8 @@ window.TOOLBOX = {
    "icon": "🟪",
    "desc": ".NET 6/7/8 桌面程序运行时",
    "tags": [
-    "微软官方"
+    "微软官方",
+    "运行时"
    ],
    "links": [
     {
@@ -1048,7 +1172,8 @@ window.TOOLBOX = {
    "icon": "🧩",
    "desc": "老软件依赖的 .NET Framework 运行时",
    "tags": [
-    "微软官方"
+    "微软官方",
+    "运行时"
    ],
    "links": [
     {
@@ -1064,7 +1189,8 @@ window.TOOLBOX = {
    "icon": "🎮",
    "desc": "老游戏 / 老软件缺 d3dx9 时补装",
    "tags": [
-    "微软官方"
+    "微软官方",
+    "游戏"
    ],
    "links": [
     {
@@ -1080,7 +1206,8 @@ window.TOOLBOX = {
    "icon": "⚙️",
    "desc": "一次装齐 VC++ 运行库，治“缺 dll”",
    "tags": [
-    "社区"
+    "社区",
+    "运行库"
    ],
    "links": [
     {
@@ -1101,7 +1228,9 @@ window.TOOLBOX = {
    "icon": "💬",
    "desc": "桌面 AI 对话客户端，可接各家 API",
    "tags": [
-    "开源"
+    "开源",
+    "中文",
+    "AI"
    ],
    "links": [
     {
@@ -1152,7 +1281,9 @@ window.TOOLBOX = {
    "icon": "🍒",
    "desc": "多模型 AI 客户端，支持本地模型",
    "tags": [
-    "开源"
+    "开源",
+    "中文",
+    "AI"
    ],
    "links": [
     {
