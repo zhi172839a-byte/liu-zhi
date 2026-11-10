@@ -2999,15 +2999,21 @@ window.TOOLBOX = {
     "05"
    ],
    "icon": "🧠",
-   "desc": "Python 专用 IDE，社区版免费（官网直链，无国内镜像）",
+   "desc": "Python 专用 IDE，免费版够用；点第一个直接下 Windows 安装包",
    "tags": [
     "免费",
     "中文"
    ],
    "links": [
     {
-     "label": "官网下载",
-     "url": "https://www.jetbrains.com/pycharm/download/"
+     "label": "直接下载 Windows 版",
+     "url": "https://download.jetbrains.com/product?code=PCC&latest&distribution=windows",
+     "primary": true
+    },
+    {
+     "label": "官网页面",
+     "url": "https://www.jetbrains.com/pycharm/download/",
+     "primary": false
     }
    ]
   },
@@ -3017,15 +3023,21 @@ window.TOOLBOX = {
     "05"
    ],
    "icon": "☕",
-   "desc": "Java 开发首选，社区版免费（官网直链，无国内镜像）",
+   "desc": "Java 开发首选，社区版免费；点第一个直接下 Windows 安装包",
    "tags": [
     "免费",
     "中文"
    ],
    "links": [
     {
-     "label": "官网下载",
-     "url": "https://www.jetbrains.com/idea/download/"
+     "label": "直接下载 Windows 版",
+     "url": "https://download.jetbrains.com/product?code=IIC&latest&distribution=windows",
+     "primary": true
+    },
+    {
+     "label": "官网页面",
+     "url": "https://www.jetbrains.com/idea/download/",
+     "primary": false
     }
    ]
   },
@@ -3035,15 +3047,21 @@ window.TOOLBOX = {
     "05"
    ],
    "icon": "🧰",
-   "desc": "装/更新 JetBrains 全家桶，支持断点续传（无国内镜像）",
+   "desc": "装/更新 JetBrains 全家桶，支持断点续传",
    "tags": [
     "免费",
     "中文"
    ],
    "links": [
     {
-     "label": "官网下载",
-     "url": "https://www.jetbrains.com/toolbox-app/"
+     "label": "直接下载 Windows 版",
+     "url": "https://download.jetbrains.com/product?code=TBA&latest&distribution=windows",
+     "primary": true
+    },
+    {
+     "label": "官网页面",
+     "url": "https://www.jetbrains.com/toolbox-app/",
+     "primary": false
     }
    ]
   },
