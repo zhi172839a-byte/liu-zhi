@@ -2999,7 +2999,7 @@ window.TOOLBOX = {
     "05"
    ],
    "icon": "🧠",
-   "desc": "Python 专用 IDE，社区版免费够用",
+   "desc": "Python 专用 IDE，社区版免费（官网直链，无国内镜像）",
    "tags": [
     "免费",
     "中文"
@@ -3017,7 +3017,7 @@ window.TOOLBOX = {
     "05"
    ],
    "icon": "☕",
-   "desc": "Java 开发首选，社区版免费",
+   "desc": "Java 开发首选，社区版免费（官网直链，无国内镜像）",
    "tags": [
     "免费",
     "中文"
@@ -3035,7 +3035,7 @@ window.TOOLBOX = {
     "05"
    ],
    "icon": "🧰",
-   "desc": "一站式安装和更新 PyCharm / IDEA 全家桶",
+   "desc": "装/更新 JetBrains 全家桶，支持断点续传（无国内镜像）",
    "tags": [
     "免费",
     "中文"
