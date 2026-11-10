@@ -14,6 +14,73 @@ window.TOOLBOX = {
    ]
   },
   {
+   "id": "20",
+   "name": "截图录屏",
+   "desc": "截图、OCR、录屏",
+   "color": "#e11d48",
+   "kws": [
+    "截图",
+    "OCR",
+    "录屏",
+    "GIF"
+   ]
+  },
+  {
+   "id": "21",
+   "name": "播放器",
+   "desc": "视频音乐，全格式",
+   "color": "#9333ea",
+   "kws": [
+    "视频",
+    "音乐",
+    "万能解码"
+   ]
+  },
+  {
+   "id": "22",
+   "name": "下载传输",
+   "desc": "下载、互传、同步",
+   "color": "#0d9488",
+   "kws": [
+    "BT",
+    "直链",
+    "局域网"
+   ]
+  },
+  {
+   "id": "23",
+   "name": "PDF 文档",
+   "desc": "阅读、合并、转换",
+   "color": "#d97706",
+   "kws": [
+    "阅读",
+    "合并",
+    "转换"
+   ]
+  },
+  {
+   "id": "24",
+   "name": "安全隐私",
+   "desc": "密码、加密、杀毒",
+   "color": "#475569",
+   "kws": [
+    "密码",
+    "加密",
+    "杀毒"
+   ]
+  },
+  {
+   "id": "25",
+   "name": "效率工具",
+   "desc": "剪贴板、看图、U盘",
+   "color": "#0284c7",
+   "kws": [
+    "剪贴板",
+    "看图",
+    "U盘"
+   ]
+  },
+  {
    "id": "01",
    "name": "文献笔记",
    "desc": "查文献、管 PDF、做笔记",
@@ -69,13 +136,13 @@ window.TOOLBOX = {
   },
   {
    "id": "06",
-   "name": "影音三维",
+   "name": "影音创作",
    "desc": "音频、3D、动画",
    "color": "#ef4444",
    "kws": [
     "音频",
-    "3D",
-    "渲染"
+    "视频",
+    "3D"
    ]
   },
   {
@@ -1320,6 +1387,483 @@ window.TOOLBOX = {
      "label": "官网",
      "url": "https://cherry-ai.com/",
      "primary": false
+    }
+   ]
+  },
+  {
+   "name": "ShareX",
+   "cat": "20",
+   "icon": "📸",
+   "desc": "截图 + OCR + 录屏 + 上传，一套搞定",
+   "tags": [
+    "开源",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://getsharex.com/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "Snipaste",
+   "cat": "20",
+   "icon": "📌",
+   "desc": "截图贴图，按 F1 就截，按下就贴",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://www.snipaste.com/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "OBS Studio",
+   "cat": "20",
+   "icon": "🎥",
+   "desc": "录屏、直播、推流的标准答案",
+   "tags": [
+    "开源",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://obsproject.com/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "ScreenToGif",
+   "cat": "20",
+   "icon": "🎞️",
+   "desc": "把屏幕操作录成 GIF 小动图",
+   "tags": [
+    "开源",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://www.screentogif.com/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "PotPlayer",
+   "cat": "21",
+   "icon": "▶️",
+   "desc": "老牌播放器，解码全能（免费版含广告）",
+   "tags": [
+    "免费",
+    "中文",
+    "含广告"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://potplayer.daum.net/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "VLC",
+   "cat": "21",
+   "icon": "📺",
+   "desc": "什么格式都能播，跨平台老牌",
+   "tags": [
+    "开源",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://www.videolan.org/vlc/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "mpv",
+   "cat": "21",
+   "icon": "⏯️",
+   "desc": "极简高性能，键盘党最爱",
+   "tags": [
+    "开源",
+    "轻量"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://mpv.io/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "MusicBee",
+   "cat": "21",
+   "icon": "🎵",
+   "desc": "本地音乐库管理 + 播放",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://getmusicbee.com/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "qBittorrent",
+   "cat": "22",
+   "icon": "🧲",
+   "desc": "BT 下载，干净无广告",
+   "tags": [
+    "开源",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://www.qbittorrent.org/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "Free Download Manager",
+   "cat": "22",
+   "icon": "⬇️",
+   "desc": "多线程下载，接管浏览器下载",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://www.freedownloadmanager.org/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "LocalSend",
+   "cat": "22",
+   "icon": "📡",
+   "desc": "手机↔电脑局域网秒传，不用数据线",
+   "tags": [
+    "开源",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://localsend.org/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "Syncthing",
+   "cat": "22",
+   "icon": "🔄",
+   "desc": "多设备文件自动同步，点对点不经云",
+   "tags": [
+    "开源"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://syncthing.net/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "SumatraPDF",
+   "cat": "23",
+   "icon": "📕",
+   "desc": "秒开的轻量 PDF 阅读器",
+   "tags": [
+    "开源",
+    "中文",
+    "轻量"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://www.sumatrapdfreader.org/free-pdf-reader",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "PDF24",
+   "cat": "23",
+   "icon": "🧾",
+   "desc": "PDF 合并 / 压缩 / 转换，在线+离线",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://tools.pdf24.org/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "Stirling-PDF",
+   "cat": "23",
+   "icon": "📄",
+   "desc": "本地跑的 PDF 工具箱，文件不外传",
+   "tags": [
+    "开源",
+    "本地"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://stirlingtools.com/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "PDFsam Basic",
+   "cat": "23",
+   "icon": "📑",
+   "desc": "PDF 拆分、合并、页面提取",
+   "tags": [
+    "开源",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://pdfsam.org/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "Bitwarden",
+   "cat": "24",
+   "icon": "🔑",
+   "desc": "密码管理，全平台同步",
+   "tags": [
+    "开源",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://bitwarden.com/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "KeePassXC",
+   "cat": "24",
+   "icon": "🔐",
+   "desc": "离线密码库，数据只在自己电脑",
+   "tags": [
+    "开源",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://keepassxc.org/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "VeraCrypt",
+   "cat": "24",
+   "icon": "🔒",
+   "desc": "磁盘 / U 盘加密，军工级",
+   "tags": [
+    "开源",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://veracrypt.fr/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "火绒安全",
+   "cat": "24",
+   "icon": "🛡️",
+   "desc": "轻量国产杀软，无弹窗无捆绑",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://www.huorong.cn/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "Ditto",
+   "cat": "25",
+   "icon": "📋",
+   "desc": "剪贴板历史，历史记录随便翻",
+   "tags": [
+    "开源",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://ditto-cp.sourceforge.io/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "ImageGlass",
+   "cat": "25",
+   "icon": "🖼️",
+   "desc": "好看又快的看图软件",
+   "tags": [
+    "开源",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://imageglass.org/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "FastStone Image Viewer",
+   "cat": "25",
+   "icon": "🏞️",
+   "desc": "看图 + 轻量编辑 + 批量转换",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://www.faststone.org/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "WizTree",
+   "cat": "25",
+   "icon": "🌳",
+   "desc": "秒查 C 盘谁在吃空间",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://www.diskanalyzer.com/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "Ventoy",
+   "cat": "25",
+   "icon": "💾",
+   "desc": "一个 U 盘装多个系统镜像",
+   "tags": [
+    "开源",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://www.ventoy.net/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "Dism++",
+   "cat": "25",
+   "icon": "🛠️",
+   "desc": "系统清理 / 优化 / 备份，绿色免安装",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://chuyu.me/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "Shotcut",
+   "cat": "06",
+   "icon": "🎬",
+   "desc": "免费视频剪辑，上手快",
+   "tags": [
+    "开源",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://shotcut.org/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "Kdenlive",
+   "cat": "06",
+   "icon": "🎦",
+   "desc": "多轨专业剪辑，开源里的重武器",
+   "tags": [
+    "开源",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://kdenlive.org/",
+     "primary": true
     }
    ]
   }
