@@ -16,6 +16,11 @@
   var hotEl = document.getElementById("hot");
   var searchbox = document.getElementById("searchbox");
   var themeBtn = document.getElementById("themeBtn");
+  var sheetEl = document.getElementById("sheet");
+
+  function isMobile() {
+    return window.matchMedia && window.matchMedia("(max-width: 980px)").matches;
+  }
 
   if (!DATA) {
     content.innerHTML = '<div class="empty"><div class="big">😕</div><p>数据没加载出来，检查 assets/data.js 是否在。</p></div>';
@@ -29,6 +34,7 @@
   var APPS = DATA.apps;
 
   var state = { view: "all", q: "" };
+  var openGroups = {};   // 分组是否展开，默认全部收起
 
   try {
     var initialQ = new URLSearchParams(window.location.search).get("q");
@@ -298,6 +304,59 @@
 
   /* ---------- 渲染 ---------- */
 
+  /* 手机：图标宫格 */
+  function cellHTML(app) {
+    var cats = app.cats || [];
+    var c = CAT[cats[0]] || { color: "#4f7cff" };
+    return '<button class="appcell" type="button" data-app="' + esc(app.name) + '" style="--c:' + esc(c.color) + '">' +
+      '<span class="cell-icon">' + (app.icon || "📦") + "</span>" +
+      '<span class="cell-name">' + esc(app.name) + "</span>" +
+    "</button>";
+  }
+
+  function listHTML(items, q) {
+    if (isMobile()) {
+      return '<div class="appgrid">' + items.map(cellHTML).join("") + "</div>";
+    }
+    return '<div class="grid">' + items.map(function (a, i) { return cardHTML(a, i, q); }).join("") + "</div>";
+  }
+
+  /* 手机：底部详情面板 */
+  function openSheet(app) {
+    var cats = (app.cats || []).map(function (cid) { return CAT[cid]; }).filter(Boolean);
+    var accent = (cats[0] || {}).color || "#4f7cff";
+    var links = (app.links || []).map(function (l) {
+      return '<a class="sheet-link" href="' + esc(l.url) + '" target="_blank" rel="noopener noreferrer">' +
+        '<span class="sl-label">' + esc(l.label) + "</span>" +
+        '<span class="sl-url">' + esc(l.url.replace(/^https?:\/\//, "").slice(0, 42)) + "</span>" +
+        '<span class="sl-go">↗</span></a>';
+    }).join("");
+
+    sheetEl.innerHTML =
+      '<div class="sheet-card" role="dialog" aria-modal="true">' +
+        '<div class="sheet-grab"></div>' +
+        '<button class="sheet-x" type="button" data-sheet-close aria-label="关闭">✕</button>' +
+        '<div class="sheet-head">' +
+          '<div class="sheet-icon" style="--c:' + esc(accent) + '">' + (app.icon || "📦") + "</div>" +
+          "<div>" +
+            "<h3>" + esc(app.name) + "</h3>" +
+            '<p class="sheet-cats">' + cats.map(function (c) { return esc(c.name); }).join(" · ") + "</p>" +
+          "</div>" +
+        "</div>" +
+        '<p class="sheet-desc">' + esc(app.desc || "") + "</p>" +
+        '<div class="sheet-tags">' + (app.tags || []).map(function (t) { return '<span class="tag">' + esc(t) + "</span>"; }).join("") + "</div>" +
+        '<div class="sheet-links">' + links + "</div>" +
+        '<button class="sheet-copy" type="button" data-copy="' + esc((app.links[0] || {}).url || "") + '">⧉ 复制链接</button>' +
+      "</div>";
+    sheetEl.hidden = false;
+    document.body.classList.add("sheet-open");
+  }
+
+  function closeSheet() {
+    sheetEl.hidden = true;
+    document.body.classList.remove("sheet-open");
+  }
+
   function navItem(id, label, count, color, tip, cls) {
     var active = state.view === id ? " is-active" : "";
     return (
@@ -377,30 +436,41 @@
       content.innerHTML =
         '<div class="result-head">找到 <b>' + hits.length + "</b> 个 · “<b>" + esc(q) + "</b>”</div>" +
         (hits.length
-          ? '<div class="grid">' + hits.map(function (o, i) { return cardHTML(o.app, i, q); }).join("") + "</div>"
+          ? listHTML(hits.map(function (o) { return o.app; }), q)
           : emptyHTML("没找到 “" + q + "”", "换个说法试试：清理C盘 / 截图 / 合并PDF / 剪视频 / 杀毒"));
       return;
     }
 
     if (state.view === "all") {
-      content.innerHTML = GROUPS.map(function (g) {
+      var anyOpen = GROUPS.some(function (g) { return !!openGroups[g.id]; });
+      var bar =
+        '<div class="toolbar">' +
+          "<span>共 <b>" + GROUPS.length + "</b> 类 · <b>" + APPS.length + "</b> 款软件，点分类展开</span>" +
+          '<button type="button" class="tb-btn" data-expand="' + (anyOpen ? "none" : "all") + '">' +
+            (anyOpen ? "全部收起" : "全部展开") +
+          "</button>" +
+        "</div>";
+
+      content.innerHTML = bar + GROUPS.map(function (g) {
         var items = APPS.filter(function (a) {
           return (a.cats || []).some(function (cid) { return g.cats.indexOf(cid) > -1; });
         });
         if (!items.length) return "";
         items.sort(byCatThenName(g));
+        var open = !!openGroups[g.id];
         var kws = g.cats.map(function (cid) {
           return CAT[cid] ? '<span class="kw">' + esc(CAT[cid].name) + "</span>" : "";
         }).join("");
         return (
-          '<section class="section" style="--c:' + g.color + '">' +
-            '<div class="section-head"><h2>' + esc(g.name) + "</h2>" +
+          '<section class="section' + (open ? "" : " collapsed") + '" style="--c:' + g.color + '" data-group="' + g.id + '">' +
+            '<button class="section-head" type="button" data-toggle="' + g.id + '" aria-expanded="' + (open ? "true" : "false") + '">' +
+              "<h2>" + esc(g.name) + "</h2>" +
               '<span class="kws">' + kws + "</span>" +
               '<span class="sec-count">' + items.length + "</span>" +
-            "</div>" +
-            '<div class="grid">' + items.map(function (a, i) { return cardHTML(a, i); }).join("") + "</div>" +
-          "</section>"
-        );
+              '<span class="chev" aria-hidden="true">▾</span>' +
+            "</button>" +
+            listHTML(items) +
+          "</section>");
       }).join("");
       return;
     }
@@ -413,7 +483,7 @@
       }).sort(byCatThenName(g));
       content.innerHTML =
         '<div class="result-head"><b>' + esc(g.name) + "</b> · " + apps.length + " 个</div>" +
-        '<div class="grid">' + apps.map(function (a, i) { return cardHTML(a, i); }).join("") + "</div>";
+        listHTML(apps);
       return;
     }
 
@@ -421,7 +491,7 @@
     content.innerHTML =
       '<div class="result-head"><b>' + esc(CAT[state.view] ? CAT[state.view].name : "") + "</b> · " + list.length + " 个</div>" +
       (list.length
-        ? '<div class="grid">' + list.map(function (a, i) { return cardHTML(a, i); }).join("") + "</div>"
+        ? listHTML(list)
         : emptyHTML("这个分类还没有软件"));
   }
 
@@ -456,6 +526,33 @@
   });
 
   content.addEventListener("click", function (e) {
+    var cellBtn = e.target.closest("[data-app]");
+    if (cellBtn) {
+      var nm = cellBtn.getAttribute("data-app");
+      for (var ci = 0; ci < APPS.length; ci++) {
+        if (APPS[ci].name === nm) { openSheet(APPS[ci]); break; }
+      }
+      return;
+    }
+
+    var tgBtn = e.target.closest("[data-toggle]");
+    if (tgBtn) {
+      var gid = tgBtn.dataset.toggle;
+      openGroups[gid] = !openGroups[gid];
+      var sec = tgBtn.closest(".section");
+      if (sec) sec.classList.toggle("collapsed", !openGroups[gid]);
+      tgBtn.setAttribute("aria-expanded", String(!!openGroups[gid]));
+      return;
+    }
+
+    var exBtn = e.target.closest("[data-expand]");
+    if (exBtn) {
+      var all = exBtn.dataset.expand === "all";
+      GROUPS.forEach(function (g) { openGroups[g.id] = all; });
+      render();
+      return;
+    }
+
     var moreBtn = e.target.closest("[data-more]");
     if (moreBtn) {
       var card = moreBtn.closest(".card");
@@ -479,6 +576,12 @@
     });
     document.addEventListener("click", function (e) {
       if (!e.target.closest(".float-contact")) fcPop.hidden = true;
+    });
+  }
+
+  if (sheetEl) {
+    sheetEl.addEventListener("click", function (e) {
+      if (e.target === sheetEl || e.target.closest("[data-sheet-close]")) closeSheet();
     });
   }
 
@@ -507,6 +610,7 @@
 
   document.addEventListener("keydown", function (e) {
     var typing = /^(INPUT|TEXTAREA|SELECT)$/.test(document.activeElement.tagName);
+    if (e.key === "Escape" && sheetEl && !sheetEl.hidden) { closeSheet(); return; }
     if (e.key === "/" && !typing) {
       e.preventDefault();
       searchbox.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -562,6 +666,13 @@
   window.addEventListener("scroll", function () {
     topbar.classList.toggle("is-stuck", window.scrollY > 8);
   }, { passive: true });
+
+  /* 窗口尺寸跨断点时重渲染（桌面卡片 ↔ 手机宫格） */
+  var lastMobile = isMobile();
+  window.addEventListener("resize", function () {
+    var m = isMobile();
+    if (m !== lastMobile) { lastMobile = m; render(); }
+  });
 
   render();
   toggleClear();
