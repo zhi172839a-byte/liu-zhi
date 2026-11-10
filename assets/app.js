@@ -170,9 +170,13 @@
     var nameNorm = norm(app.name);
     var desc = (app.desc || "").toLowerCase();
     var tags = (app.tags || []).map(function (t) { return String(t).toLowerCase(); });
-    var c = CAT[app.cat] || {};
-    var catLower = (c.name || "").toLowerCase();
-    var kws = (c.kws || []).map(function (k) { return String(k).toLowerCase(); });
+    var catIds = app.cats || [];
+    var catNames = catIds.map(function (cid) { return (CAT[cid] || {}).name || ""; });
+    var catLower = catNames.join(" ").toLowerCase();
+    var kws = [];
+    catIds.forEach(function (cid) {
+      ((CAT[cid] || {}).kws || []).forEach(function (k) { kws.push(String(k).toLowerCase()); });
+    });
     var linkLabels = (app.links || []).map(function (l) { return (l.label || "").toLowerCase(); });
     var hay = nameLower + " " + desc + " " + tags.join(" ") + " " + catLower + " " + kws.join(" ") + " " + linkLabels.join(" ");
 
@@ -252,7 +256,8 @@
   }
 
   function cardHTML(app, index, q) {
-    var c = CAT[app.cat] || { color: "#4f7cff", name: "未分类" };
+    var cats = app.cats || [];
+    var c = CAT[cats[0]] || { color: "#4f7cff" };
     var links = app.links || [];
     var shown = links.slice(0, MAX_LINKS);
     var rest = links.slice(MAX_LINKS);
@@ -271,13 +276,16 @@
       : "";
 
     var tags = (app.tags || []).map(function (t) { return '<span class="tag">' + esc(t) + "</span>"; }).join("");
+    var catTags = cats.slice(0, 2).map(function (cid) {
+      return CAT[cid] ? '<span class="tag cat">' + esc(CAT[cid].name) + "</span>" : "";
+    }).join("");
 
     return (
       '<article class="card" style="--c:' + esc(c.color) + ';--i:' + Math.min(index, 12) + '">' +
         '<div class="card-top">' +
           '<div class="tile" aria-hidden="true">' + (app.icon || "📦") + "</div>" +
           '<div class="card-meta"><h3 title="' + esc(app.name) + '">' + hl(app.name, q) + "</h3>" +
-            '<div class="tags"><span class="tag cat">' + esc(c.name) + "</span>" + tags + "</div>" +
+            '<div class="tags">' + catTags + tags + "</div>" +
           "</div>" +
         "</div>" +
         '<p class="desc">' + hl(app.desc || "", q) + "</p>" +
@@ -303,7 +311,7 @@
 
   function countByCat(id) {
     var n = 0;
-    for (var i = 0; i < APPS.length; i++) if (APPS[i].cat === id) n++;
+    for (var i = 0; i < APPS.length; i++) if ((APPS[i].cats || []).indexOf(id) > -1) n++;
     return n;
   }
 
@@ -350,7 +358,9 @@
 
   function byCatThenName(g) {
     return function (a, b) {
-      var ca = g.cats.indexOf(a.cat), cb = g.cats.indexOf(b.cat);
+      var ca = 99, cb = 99, i;
+      for (i = 0; i < (a.cats || []).length; i++) { var ia = g.cats.indexOf(a.cats[i]); if (ia > -1 && ia < ca) ca = ia; }
+      for (i = 0; i < (b.cats || []).length; i++) { var ib = g.cats.indexOf(b.cats[i]); if (ib > -1 && ib < cb) cb = ib; }
       if (ca !== cb) return ca - cb;
       return a.name.localeCompare(b.name);
     };
@@ -374,7 +384,9 @@
 
     if (state.view === "all") {
       content.innerHTML = GROUPS.map(function (g) {
-        var items = APPS.filter(function (a) { return g.cats.indexOf(a.cat) > -1; });
+        var items = APPS.filter(function (a) {
+          return (a.cats || []).some(function (cid) { return g.cats.indexOf(cid) > -1; });
+        });
         if (!items.length) return "";
         items.sort(byCatThenName(g));
         var kws = g.cats.map(function (cid) {
@@ -396,14 +408,16 @@
     if (state.view.indexOf("g:") === 0) {
       var g = groupById(state.view.slice(2));
       if (!g) return;
-      var apps = APPS.filter(function (a) { return g.cats.indexOf(a.cat) > -1; }).sort(byCatThenName(g));
+      var apps = APPS.filter(function (a) {
+        return (a.cats || []).some(function (cid) { return g.cats.indexOf(cid) > -1; });
+      }).sort(byCatThenName(g));
       content.innerHTML =
         '<div class="result-head"><b>' + esc(g.name) + "</b> · " + apps.length + " 个</div>" +
         '<div class="grid">' + apps.map(function (a, i) { return cardHTML(a, i); }).join("") + "</div>";
       return;
     }
 
-    var list = APPS.filter(function (a) { return a.cat === state.view; });
+    var list = APPS.filter(function (a) { return (a.cats || []).indexOf(state.view) > -1; });
     content.innerHTML =
       '<div class="result-head"><b>' + esc(CAT[state.view] ? CAT[state.view].name : "") + "</b> · " + list.length + " 个</div>" +
       (list.length

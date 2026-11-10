@@ -2,6 +2,53 @@ window.TOOLBOX = {
  "updated": "2026-11-10",
  "cats": [
   {
+   "id": "30",
+   "name": "新机开荒",
+   "desc": "新电脑照着装一遍",
+   "color": "#f43f5e",
+   "kws": [
+    "新机",
+    "必装",
+    "装机",
+    "开荒"
+   ]
+  },
+  {
+   "id": "31",
+   "name": "通讯办公",
+   "desc": "聊天、开会、办公",
+   "color": "#0ea5e9",
+   "kws": [
+    "微信",
+    "QQ",
+    "会议",
+    "办公"
+   ]
+  },
+  {
+   "id": "32",
+   "name": "上网网盘",
+   "desc": "浏览器、输入法、网盘、下载",
+   "color": "#6366f1",
+   "kws": [
+    "浏览器",
+    "输入法",
+    "网盘",
+    "下载"
+   ]
+  },
+  {
+   "id": "33",
+   "name": "休闲娱乐",
+   "desc": "游戏、音乐",
+   "color": "#f59e0b",
+   "kws": [
+    "游戏",
+    "音乐",
+    "Steam"
+   ]
+  },
+  {
    "id": "00",
    "name": "装机必备",
    "desc": "装机先装的四件套",
@@ -184,7 +231,6 @@ window.TOOLBOX = {
  "apps": [
   {
    "name": "7-Zip",
-   "cat": "00",
    "icon": "📦",
    "desc": "免费开源压缩解压，7z / zip / rar 解压都能开",
    "tags": [
@@ -198,11 +244,14 @@ window.TOOLBOX = {
      "url": "https://www.7-zip.org/",
      "primary": true
     }
+   ],
+   "cats": [
+    "00",
+    "30"
    ]
   },
   {
    "name": "Everything",
-   "cat": "00",
    "icon": "🔎",
    "desc": "秒级全盘文件名搜索，装机必备",
    "tags": [
@@ -226,11 +275,14 @@ window.TOOLBOX = {
      "url": "https://www.voidtools.com/support/everything/previous_versions/",
      "primary": false
     }
+   ],
+   "cats": [
+    "00",
+    "30"
    ]
   },
   {
    "name": "RustDesk",
-   "cat": "00",
    "icon": "🖥️",
    "desc": "开源远程桌面，可自建服务器",
    "tags": [
@@ -243,11 +295,13 @@ window.TOOLBOX = {
      "url": "https://rustdesk.com/",
      "primary": true
     }
+   ],
+   "cats": [
+    "00"
    ]
   },
   {
    "name": "Sysinternals",
-   "cat": "00",
    "icon": "🧰",
    "desc": "微软官方系统排查工具全家桶",
    "tags": [
@@ -270,11 +324,13 @@ window.TOOLBOX = {
      "url": "https://learn.microsoft.com/sysinternals/downloads/process-explorer",
      "primary": false
     }
+   ],
+   "cats": [
+    "00"
    ]
   },
   {
    "name": "Calibre",
-   "cat": "01",
    "icon": "📖",
    "desc": "电子书管理 / 转换 / 阅读一条龙",
    "tags": [
@@ -288,11 +344,13 @@ window.TOOLBOX = {
      "url": "https://calibre-ebook.com/",
      "primary": true
     }
+   ],
+   "cats": [
+    "01"
    ]
   },
   {
    "name": "JabRef",
-   "cat": "01",
    "icon": "📑",
    "desc": "BibTeX 文献库管理，写论文配 LaTeX",
    "tags": [
@@ -305,11 +363,13 @@ window.TOOLBOX = {
      "url": "https://www.jabref.org/",
      "primary": true
     }
+   ],
+   "cats": [
+    "01"
    ]
   },
   {
    "name": "Obsidian",
-   "cat": "01",
    "icon": "🗒️",
    "desc": "本地 Markdown 笔记，双向链接",
    "tags": [
@@ -348,11 +408,13 @@ window.TOOLBOX = {
      "url": "https://github.com/obsidianmd/obsidian-releases/releases",
      "primary": false
     }
+   ],
+   "cats": [
+    "01"
    ]
   },
   {
    "name": "Zotero",
-   "cat": "01",
    "icon": "📚",
    "desc": "文献管理，网页一键抓取，插件生态强",
    "tags": [
@@ -381,11 +443,13 @@ window.TOOLBOX = {
      "url": "https://www.zotero.org/support/changelog",
      "primary": false
     }
+   ],
+   "cats": [
+    "01"
    ]
   },
   {
    "name": "LyX",
-   "cat": "02",
    "icon": "📐",
    "desc": "所见即所得的 LaTeX 编辑器",
    "tags": [
@@ -398,11 +462,13 @@ window.TOOLBOX = {
      "url": "https://www.lyx.org/",
      "primary": true
     }
+   ],
+   "cats": [
+    "02"
    ]
   },
   {
    "name": "MiKTeX",
-   "cat": "02",
    "icon": "📜",
    "desc": "按需安装的轻量 LaTeX 发行版",
    "tags": [
@@ -415,11 +481,13 @@ window.TOOLBOX = {
      "url": "https://miktex.org/",
      "primary": true
     }
+   ],
+   "cats": [
+    "02"
    ]
   },
   {
    "name": "Pandoc",
-   "cat": "02",
    "icon": "🔁",
    "desc": "万能文档格式转换：md / docx / pdf / html",
    "tags": [
@@ -432,11 +500,13 @@ window.TOOLBOX = {
      "url": "https://pandoc.org/",
      "primary": true
     }
+   ],
+   "cats": [
+    "02"
    ]
   },
   {
    "name": "TeX Live",
-   "cat": "02",
    "icon": "🧾",
    "desc": "完整 LaTeX 发行版，一次装全",
    "tags": [
@@ -454,11 +524,13 @@ window.TOOLBOX = {
      "url": "https://mirrors.tuna.tsinghua.edu.cn/CTAN/",
      "primary": false
     }
+   ],
+   "cats": [
+    "02"
    ]
   },
   {
    "name": "TeXstudio",
-   "cat": "02",
    "icon": "✍️",
    "desc": "LaTeX 编辑器，语法高亮 + 补全",
    "tags": [
@@ -471,11 +543,13 @@ window.TOOLBOX = {
      "url": "https://www.texstudio.org/",
      "primary": true
     }
+   ],
+   "cats": [
+    "02"
    ]
   },
   {
    "name": "Typst",
-   "cat": "02",
    "icon": "📄",
    "desc": "新一代排版系统，编译飞快",
    "tags": [
@@ -488,11 +562,13 @@ window.TOOLBOX = {
      "url": "https://typst.app/",
      "primary": true
     }
+   ],
+   "cats": [
+    "02"
    ]
   },
   {
    "name": "Dia",
-   "cat": "03",
    "icon": "🗺️",
    "desc": "轻量流程图与示意图工具",
    "tags": [
@@ -505,11 +581,13 @@ window.TOOLBOX = {
      "url": "http://dia-installer.de/",
      "primary": true
     }
+   ],
+   "cats": [
+    "03"
    ]
   },
   {
    "name": "draw.io",
-   "cat": "03",
    "icon": "📊",
    "desc": "流程图 / 架构图，网页版免登录",
    "tags": [
@@ -522,11 +600,13 @@ window.TOOLBOX = {
      "url": "https://www.drawio.com/",
      "primary": true
     }
+   ],
+   "cats": [
+    "03"
    ]
   },
   {
    "name": "GIMP",
-   "cat": "03",
    "icon": "🖼️",
    "desc": "开源图像处理，PS 的免费替代",
    "tags": [
@@ -555,11 +635,13 @@ window.TOOLBOX = {
      "url": "https://download.gimp.org/pub/gimp/",
      "primary": false
     }
+   ],
+   "cats": [
+    "03"
    ]
   },
   {
    "name": "Inkscape",
-   "cat": "03",
    "icon": "🖋️",
    "desc": "开源矢量绘图，SVG 全能选手",
    "tags": [
@@ -593,11 +675,13 @@ window.TOOLBOX = {
      "url": "https://inkscape.org/release/0.92.5/windows/",
      "primary": false
     }
+   ],
+   "cats": [
+    "03"
    ]
   },
   {
    "name": "Krita",
-   "cat": "03",
    "icon": "🎨",
    "desc": "数字绘画 / 插画 / 概念图",
    "tags": [
@@ -611,11 +695,13 @@ window.TOOLBOX = {
      "url": "https://krita.io/",
      "primary": true
     }
+   ],
+   "cats": [
+    "03"
    ]
   },
   {
    "name": "Scribus",
-   "cat": "03",
    "icon": "📰",
    "desc": "开源排版：画册、海报、刊物",
    "tags": [
@@ -628,11 +714,13 @@ window.TOOLBOX = {
      "url": "https://www.scribus.net/",
      "primary": true
     }
+   ],
+   "cats": [
+    "03"
    ]
   },
   {
    "name": "GeoGebra",
-   "cat": "04",
    "icon": "📏",
    "desc": "数学可视化：几何、函数、3D",
    "tags": [
@@ -646,11 +734,13 @@ window.TOOLBOX = {
      "url": "https://www.geogebra.org/download",
      "primary": true
     }
+   ],
+   "cats": [
+    "04"
    ]
   },
   {
    "name": "GNU Octave",
-   "cat": "04",
    "icon": "📈",
    "desc": "MATLAB 兼容的数值计算环境",
    "tags": [
@@ -663,11 +753,13 @@ window.TOOLBOX = {
      "url": "https://octave.org/",
      "primary": true
     }
+   ],
+   "cats": [
+    "04"
    ]
   },
   {
    "name": "Julia",
-   "cat": "04",
    "icon": "🧮",
    "desc": "高性能科学计算语言",
    "tags": [
@@ -680,11 +772,13 @@ window.TOOLBOX = {
      "url": "https://julialang.org/",
      "primary": true
     }
+   ],
+   "cats": [
+    "04"
    ]
   },
   {
    "name": "Maxima",
-   "cat": "04",
    "icon": "🔣",
    "desc": "计算机代数系统，符号运算",
    "tags": [
@@ -697,11 +791,13 @@ window.TOOLBOX = {
      "url": "https://maxima.sourceforge.io/",
      "primary": true
     }
+   ],
+   "cats": [
+    "04"
    ]
   },
   {
    "name": "Miniforge",
-   "cat": "04",
    "icon": "🐍",
    "desc": "conda 环境管理，默认 conda-forge 源",
    "tags": [
@@ -714,11 +810,13 @@ window.TOOLBOX = {
      "url": "https://github.com/conda-forge/miniforge",
      "primary": true
     }
+   ],
+   "cats": [
+    "04"
    ]
   },
   {
    "name": "R",
-   "cat": "04",
    "icon": "📊",
    "desc": "统计分析的标配，配 RStudio 用",
    "tags": [
@@ -736,11 +834,13 @@ window.TOOLBOX = {
      "url": "https://posit.co/download/rstudio-desktop/",
      "primary": false
     }
+   ],
+   "cats": [
+    "04"
    ]
   },
   {
    "name": "Scilab",
-   "cat": "04",
    "icon": "📉",
    "desc": "开源数值计算与仿真",
    "tags": [
@@ -753,11 +853,13 @@ window.TOOLBOX = {
      "url": "https://www.scilab.org/",
      "primary": true
     }
+   ],
+   "cats": [
+    "04"
    ]
   },
   {
    "name": "Spyder",
-   "cat": "04",
    "icon": "🕷️",
    "desc": "Python 科学计算 IDE",
    "tags": [
@@ -770,11 +872,13 @@ window.TOOLBOX = {
      "url": "https://www.spyder-ide.org/",
      "primary": true
     }
+   ],
+   "cats": [
+    "04"
    ]
   },
   {
    "name": "Git",
-   "cat": "05",
    "icon": "🌿",
    "desc": "版本控制，Windows 官方安装包",
    "tags": [
@@ -787,11 +891,13 @@ window.TOOLBOX = {
      "url": "https://git-scm.com/download/win",
      "primary": true
     }
+   ],
+   "cats": [
+    "05"
    ]
   },
   {
    "name": "GitHub Desktop",
-   "cat": "05",
    "icon": "🐙",
    "desc": "图形化 Git 客户端，少敲命令",
    "tags": [
@@ -804,11 +910,13 @@ window.TOOLBOX = {
      "url": "https://desktop.github.com/",
      "primary": true
     }
+   ],
+   "cats": [
+    "05"
    ]
   },
   {
    "name": "VS Code",
-   "cat": "05",
    "icon": "💻",
    "desc": "主力代码编辑器，插件生态最大",
    "tags": [
@@ -852,11 +960,13 @@ window.TOOLBOX = {
      "url": "https://update.code.visualstudio.com/api/releases/stable",
      "primary": false
     }
+   ],
+   "cats": [
+    "05"
    ]
   },
   {
    "name": "Ardour",
-   "cat": "06",
    "icon": "🎚️",
    "desc": "开源数字音频工作站（DAW）",
    "tags": [
@@ -869,11 +979,13 @@ window.TOOLBOX = {
      "url": "https://ardour.org/",
      "primary": true
     }
+   ],
+   "cats": [
+    "06"
    ]
   },
   {
    "name": "Audacity",
-   "cat": "06",
    "icon": "🎧",
    "desc": "音频录制 / 剪辑 / 降噪",
    "tags": [
@@ -887,11 +999,13 @@ window.TOOLBOX = {
      "url": "https://www.audacityteam.org/",
      "primary": true
     }
+   ],
+   "cats": [
+    "06"
    ]
   },
   {
    "name": "Blender",
-   "cat": "06",
    "icon": "🎬",
    "desc": "开源 3D 建模 / 渲染 / 动画",
    "tags": [
@@ -935,11 +1049,13 @@ window.TOOLBOX = {
      "url": "https://download.blender.org/release/",
      "primary": false
     }
+   ],
+   "cats": [
+    "06"
    ]
   },
   {
    "name": "LibreOffice",
-   "cat": "07",
    "icon": "📝",
    "desc": "免费办公套件，兼容 Office 格式",
    "tags": [
@@ -953,11 +1069,13 @@ window.TOOLBOX = {
      "url": "https://www.libreoffice.org/download/",
      "primary": true
     }
+   ],
+   "cats": [
+    "07"
    ]
   },
   {
    "name": "ONLYOFFICE",
-   "cat": "07",
    "icon": "📋",
    "desc": "兼容性好的办公套件，界面像 Office",
    "tags": [
@@ -971,11 +1089,13 @@ window.TOOLBOX = {
      "url": "https://www.onlyoffice.com/download-desktop.aspx",
      "primary": true
     }
+   ],
+   "cats": [
+    "07"
    ]
   },
   {
    "name": "思源宋体",
-   "cat": "07",
    "icon": "🔡",
    "desc": "开源中文宋体，正文排版常用",
    "tags": [
@@ -989,11 +1109,13 @@ window.TOOLBOX = {
      "url": "https://github.com/adobe-fonts/source-han-serif",
      "primary": true
     }
+   ],
+   "cats": [
+    "07"
    ]
   },
   {
    "name": "思源黑体",
-   "cat": "07",
    "icon": "🔠",
    "desc": "Adobe / Google 开源中文字体，无衬线",
    "tags": [
@@ -1007,11 +1129,13 @@ window.TOOLBOX = {
      "url": "https://github.com/adobe-fonts/source-han-sans",
      "primary": true
     }
+   ],
+   "cats": [
+    "07"
    ]
   },
   {
    "name": "Autoruns",
-   "cat": "10",
    "icon": "🚦",
    "desc": "开机自启动项全排查（微软官方）",
    "tags": [
@@ -1024,11 +1148,13 @@ window.TOOLBOX = {
      "url": "https://learn.microsoft.com/sysinternals/downloads/autoruns",
      "primary": true
     }
+   ],
+   "cats": [
+    "10"
    ]
   },
   {
    "name": "BleachBit",
-   "cat": "10",
    "icon": "🧼",
    "desc": "开源系统垃圾清理",
    "tags": [
@@ -1041,11 +1167,13 @@ window.TOOLBOX = {
      "url": "https://www.bleachbit.org/",
      "primary": true
     }
+   ],
+   "cats": [
+    "10"
    ]
   },
   {
    "name": "Geek Uninstaller",
-   "cat": "10",
    "icon": "🧽",
    "desc": "轻量卸载工具，单文件免安装",
    "tags": [
@@ -1059,11 +1187,13 @@ window.TOOLBOX = {
      "url": "https://geekuninstaller.com/",
      "primary": true
     }
+   ],
+   "cats": [
+    "10"
    ]
   },
   {
    "name": "HiBit Uninstaller",
-   "cat": "10",
    "icon": "🧹",
    "desc": "深度卸载 + 残留注册表清理",
    "tags": [
@@ -1077,11 +1207,13 @@ window.TOOLBOX = {
      "url": "https://www.hibitsoft.ir/Uninstaller.html",
      "primary": true
     }
+   ],
+   "cats": [
+    "10"
    ]
   },
   {
    "name": "O&O ShutUp10",
-   "cat": "10",
    "icon": "🛡️",
    "desc": "一键关掉 Windows 遥测与隐私项",
    "tags": [
@@ -1094,11 +1226,13 @@ window.TOOLBOX = {
      "url": "https://www.oo-software.com/en/shutup10",
      "primary": true
     }
+   ],
+   "cats": [
+    "10"
    ]
   },
   {
    "name": "Process Explorer",
-   "cat": "10",
    "icon": "🧭",
    "desc": "加强版任务管理器（微软官方）",
    "tags": [
@@ -1111,11 +1245,13 @@ window.TOOLBOX = {
      "url": "https://learn.microsoft.com/sysinternals/downloads/process-explorer",
      "primary": true
     }
+   ],
+   "cats": [
+    "10"
    ]
   },
   {
    "name": "PowerToys",
-   "cat": "10",
    "icon": "⚡",
    "desc": "微软官方效率工具集：窗口、取色、批量改名",
    "tags": [
@@ -1144,11 +1280,14 @@ window.TOOLBOX = {
      "url": "https://github.com/microsoft/PowerToys/releases",
      "primary": false
     }
+   ],
+   "cats": [
+    "10",
+    "30"
    ]
   },
   {
    "name": "TrafficMonitor",
-   "cat": "10",
    "icon": "📶",
    "desc": "任务栏网速 / CPU / 内存监控",
    "tags": [
@@ -1197,11 +1336,13 @@ window.TOOLBOX = {
      "url": "https://github.com/zhongyang219/TrafficMonitor/releases",
      "primary": false
     }
+   ],
+   "cats": [
+    "10"
    ]
   },
   {
    "name": ".NET Desktop Runtime",
-   "cat": "12",
    "icon": "🟪",
    "desc": ".NET 6/7/8 桌面程序运行时",
    "tags": [
@@ -1214,11 +1355,13 @@ window.TOOLBOX = {
      "url": "https://dotnet.microsoft.com/download",
      "primary": true
     }
+   ],
+   "cats": [
+    "12"
    ]
   },
   {
    "name": ".NET Framework",
-   "cat": "12",
    "icon": "🧩",
    "desc": "老软件依赖的 .NET Framework 运行时",
    "tags": [
@@ -1231,11 +1374,13 @@ window.TOOLBOX = {
      "url": "https://dotnet.microsoft.com/download/dotnet-framework",
      "primary": true
     }
+   ],
+   "cats": [
+    "12"
    ]
   },
   {
    "name": "DirectX 9 运行时",
-   "cat": "12",
    "icon": "🎮",
    "desc": "老游戏 / 老软件缺 d3dx9 时补装",
    "tags": [
@@ -1248,11 +1393,13 @@ window.TOOLBOX = {
      "url": "https://www.microsoft.com/download/details.aspx?id=35",
      "primary": true
     }
+   ],
+   "cats": [
+    "12"
    ]
   },
   {
    "name": "VC++ 运行库合集",
-   "cat": "12",
    "icon": "⚙️",
    "desc": "一次装齐 VC++ 运行库，治“缺 dll”",
    "tags": [
@@ -1270,11 +1417,13 @@ window.TOOLBOX = {
      "url": "https://learn.microsoft.com/cpp/windows/latest-supported-vc-redist",
      "primary": false
     }
+   ],
+   "cats": [
+    "12"
    ]
   },
   {
    "name": "Chatbox",
-   "cat": "13",
    "icon": "💬",
    "desc": "桌面 AI 对话客户端，可接各家 API",
    "tags": [
@@ -1323,11 +1472,13 @@ window.TOOLBOX = {
      "url": "https://github.com/chatboxai/chatbox/releases",
      "primary": false
     }
+   ],
+   "cats": [
+    "13"
    ]
   },
   {
    "name": "Cherry Studio",
-   "cat": "13",
    "icon": "🍒",
    "desc": "多模型 AI 客户端，支持本地模型",
    "tags": [
@@ -1371,11 +1522,13 @@ window.TOOLBOX = {
      "url": "https://cherry-ai.com/",
      "primary": false
     }
+   ],
+   "cats": [
+    "13"
    ]
   },
   {
    "name": "ShareX",
-   "cat": "20",
    "icon": "📸",
    "desc": "截图 + OCR + 录屏 + 上传，一套搞定",
    "tags": [
@@ -1388,11 +1541,13 @@ window.TOOLBOX = {
      "url": "https://getsharex.com/",
      "primary": true
     }
+   ],
+   "cats": [
+    "20"
    ]
   },
   {
    "name": "Snipaste",
-   "cat": "20",
    "icon": "📌",
    "desc": "截图贴图，按 F1 就截，按下就贴",
    "tags": [
@@ -1405,11 +1560,14 @@ window.TOOLBOX = {
      "url": "https://www.snipaste.com/",
      "primary": true
     }
+   ],
+   "cats": [
+    "20",
+    "30"
    ]
   },
   {
    "name": "OBS Studio",
-   "cat": "20",
    "icon": "🎥",
    "desc": "录屏、直播、推流的标准答案",
    "tags": [
@@ -1422,11 +1580,13 @@ window.TOOLBOX = {
      "url": "https://obsproject.com/",
      "primary": true
     }
+   ],
+   "cats": [
+    "20"
    ]
   },
   {
    "name": "ScreenToGif",
-   "cat": "20",
    "icon": "🎞️",
    "desc": "把屏幕操作录成 GIF 小动图",
    "tags": [
@@ -1439,11 +1599,13 @@ window.TOOLBOX = {
      "url": "https://www.screentogif.com/",
      "primary": true
     }
+   ],
+   "cats": [
+    "20"
    ]
   },
   {
    "name": "PotPlayer",
-   "cat": "06",
    "icon": "▶️",
    "desc": "老牌播放器，解码全能（免费版含广告）",
    "tags": [
@@ -1457,11 +1619,13 @@ window.TOOLBOX = {
      "url": "https://potplayer.daum.net/",
      "primary": true
     }
+   ],
+   "cats": [
+    "06"
    ]
   },
   {
    "name": "VLC",
-   "cat": "06",
    "icon": "📺",
    "desc": "什么格式都能播，跨平台老牌",
    "tags": [
@@ -1474,11 +1638,14 @@ window.TOOLBOX = {
      "url": "https://www.videolan.org/vlc/",
      "primary": true
     }
+   ],
+   "cats": [
+    "06",
+    "30"
    ]
   },
   {
    "name": "mpv",
-   "cat": "06",
    "icon": "⏯️",
    "desc": "极简高性能，键盘党最爱",
    "tags": [
@@ -1491,11 +1658,13 @@ window.TOOLBOX = {
      "url": "https://mpv.io/",
      "primary": true
     }
+   ],
+   "cats": [
+    "06"
    ]
   },
   {
    "name": "MusicBee",
-   "cat": "06",
    "icon": "🎵",
    "desc": "本地音乐库管理 + 播放",
    "tags": [
@@ -1508,11 +1677,13 @@ window.TOOLBOX = {
      "url": "https://getmusicbee.com/",
      "primary": true
     }
+   ],
+   "cats": [
+    "06"
    ]
   },
   {
    "name": "qBittorrent",
-   "cat": "22",
    "icon": "🧲",
    "desc": "BT 下载，干净无广告",
    "tags": [
@@ -1525,11 +1696,13 @@ window.TOOLBOX = {
      "url": "https://www.qbittorrent.org/",
      "primary": true
     }
+   ],
+   "cats": [
+    "22"
    ]
   },
   {
    "name": "Free Download Manager",
-   "cat": "22",
    "icon": "⬇️",
    "desc": "多线程下载，接管浏览器下载",
    "tags": [
@@ -1542,11 +1715,13 @@ window.TOOLBOX = {
      "url": "https://www.freedownloadmanager.org/",
      "primary": true
     }
+   ],
+   "cats": [
+    "22"
    ]
   },
   {
    "name": "LocalSend",
-   "cat": "22",
    "icon": "📡",
    "desc": "手机↔电脑局域网秒传，不用数据线",
    "tags": [
@@ -1559,11 +1734,13 @@ window.TOOLBOX = {
      "url": "https://localsend.org/",
      "primary": true
     }
+   ],
+   "cats": [
+    "22"
    ]
   },
   {
    "name": "Syncthing",
-   "cat": "22",
    "icon": "🔄",
    "desc": "多设备文件自动同步，点对点不经云",
    "tags": [
@@ -1575,11 +1752,13 @@ window.TOOLBOX = {
      "url": "https://syncthing.net/",
      "primary": true
     }
+   ],
+   "cats": [
+    "22"
    ]
   },
   {
    "name": "SumatraPDF",
-   "cat": "23",
    "icon": "📕",
    "desc": "秒开的轻量 PDF 阅读器",
    "tags": [
@@ -1593,11 +1772,13 @@ window.TOOLBOX = {
      "url": "https://www.sumatrapdfreader.org/free-pdf-reader",
      "primary": true
     }
+   ],
+   "cats": [
+    "23"
    ]
   },
   {
    "name": "PDF24",
-   "cat": "23",
    "icon": "🧾",
    "desc": "PDF 合并 / 压缩 / 转换，在线+离线",
    "tags": [
@@ -1610,11 +1791,13 @@ window.TOOLBOX = {
      "url": "https://tools.pdf24.org/",
      "primary": true
     }
+   ],
+   "cats": [
+    "23"
    ]
   },
   {
    "name": "Stirling-PDF",
-   "cat": "23",
    "icon": "📄",
    "desc": "本地跑的 PDF 工具箱，文件不外传",
    "tags": [
@@ -1627,11 +1810,13 @@ window.TOOLBOX = {
      "url": "https://stirlingtools.com/",
      "primary": true
     }
+   ],
+   "cats": [
+    "23"
    ]
   },
   {
    "name": "PDFsam Basic",
-   "cat": "23",
    "icon": "📑",
    "desc": "PDF 拆分、合并、页面提取",
    "tags": [
@@ -1644,11 +1829,13 @@ window.TOOLBOX = {
      "url": "https://pdfsam.org/",
      "primary": true
     }
+   ],
+   "cats": [
+    "23"
    ]
   },
   {
    "name": "Bitwarden",
-   "cat": "24",
    "icon": "🔑",
    "desc": "密码管理，全平台同步",
    "tags": [
@@ -1661,11 +1848,13 @@ window.TOOLBOX = {
      "url": "https://bitwarden.com/",
      "primary": true
     }
+   ],
+   "cats": [
+    "24"
    ]
   },
   {
    "name": "KeePassXC",
-   "cat": "24",
    "icon": "🔐",
    "desc": "离线密码库，数据只在自己电脑",
    "tags": [
@@ -1678,11 +1867,13 @@ window.TOOLBOX = {
      "url": "https://keepassxc.org/",
      "primary": true
     }
+   ],
+   "cats": [
+    "24"
    ]
   },
   {
    "name": "VeraCrypt",
-   "cat": "24",
    "icon": "🔒",
    "desc": "磁盘 / U 盘加密，军工级",
    "tags": [
@@ -1695,11 +1886,13 @@ window.TOOLBOX = {
      "url": "https://veracrypt.fr/",
      "primary": true
     }
+   ],
+   "cats": [
+    "24"
    ]
   },
   {
    "name": "火绒安全",
-   "cat": "24",
    "icon": "🛡️",
    "desc": "轻量国产杀软，无弹窗无捆绑",
    "tags": [
@@ -1712,11 +1905,14 @@ window.TOOLBOX = {
      "url": "https://www.huorong.cn/",
      "primary": true
     }
+   ],
+   "cats": [
+    "24",
+    "30"
    ]
   },
   {
    "name": "Ditto",
-   "cat": "25",
    "icon": "📋",
    "desc": "剪贴板历史，历史记录随便翻",
    "tags": [
@@ -1729,11 +1925,13 @@ window.TOOLBOX = {
      "url": "https://ditto-cp.sourceforge.io/",
      "primary": true
     }
+   ],
+   "cats": [
+    "25"
    ]
   },
   {
    "name": "ImageGlass",
-   "cat": "25",
    "icon": "🖼️",
    "desc": "好看又快的看图软件",
    "tags": [
@@ -1746,11 +1944,13 @@ window.TOOLBOX = {
      "url": "https://imageglass.org/",
      "primary": true
     }
+   ],
+   "cats": [
+    "25"
    ]
   },
   {
    "name": "FastStone Image Viewer",
-   "cat": "25",
    "icon": "🏞️",
    "desc": "看图 + 轻量编辑 + 批量转换",
    "tags": [
@@ -1763,11 +1963,13 @@ window.TOOLBOX = {
      "url": "https://www.faststone.org/",
      "primary": true
     }
+   ],
+   "cats": [
+    "25"
    ]
   },
   {
    "name": "WizTree",
-   "cat": "25",
    "icon": "🌳",
    "desc": "秒查 C 盘谁在吃空间",
    "tags": [
@@ -1780,11 +1982,13 @@ window.TOOLBOX = {
      "url": "https://www.diskanalyzer.com/",
      "primary": true
     }
+   ],
+   "cats": [
+    "25"
    ]
   },
   {
    "name": "Ventoy",
-   "cat": "25",
    "icon": "💾",
    "desc": "一个 U 盘装多个系统镜像",
    "tags": [
@@ -1797,11 +2001,13 @@ window.TOOLBOX = {
      "url": "https://www.ventoy.net/",
      "primary": true
     }
+   ],
+   "cats": [
+    "25"
    ]
   },
   {
    "name": "Dism++",
-   "cat": "25",
    "icon": "🛠️",
    "desc": "系统清理 / 优化 / 备份，绿色免安装",
    "tags": [
@@ -1814,11 +2020,13 @@ window.TOOLBOX = {
      "url": "https://chuyu.me/",
      "primary": true
     }
+   ],
+   "cats": [
+    "25"
    ]
   },
   {
    "name": "Shotcut",
-   "cat": "06",
    "icon": "🎬",
    "desc": "免费视频剪辑，上手快",
    "tags": [
@@ -1831,11 +2039,13 @@ window.TOOLBOX = {
      "url": "https://shotcut.org/",
      "primary": true
     }
+   ],
+   "cats": [
+    "06"
    ]
   },
   {
    "name": "Kdenlive",
-   "cat": "06",
    "icon": "🎦",
    "desc": "多轨专业剪辑，开源里的重武器",
    "tags": [
@@ -1848,10 +2058,385 @@ window.TOOLBOX = {
      "url": "https://kdenlive.org/",
      "primary": true
     }
+   ],
+   "cats": [
+    "06"
+   ]
+  },
+  {
+   "name": "微信",
+   "cats": [
+    "30",
+    "31"
+   ],
+   "icon": "💬",
+   "desc": "电脑版微信，聊天传文件",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://pc.weixin.qq.com/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "QQ",
+   "cats": [
+    "30",
+    "31"
+   ],
+   "icon": "🐧",
+   "desc": "电脑版 QQ，聊天传大文件",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://im.qq.com/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "钉钉",
+   "cats": [
+    "30",
+    "31"
+   ],
+   "icon": "📌",
+   "desc": "公司打卡、开会、审批",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://www.dingtalk.com/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "飞书",
+   "cats": [
+    "30",
+    "31"
+   ],
+   "icon": "🕊️",
+   "desc": "文档协作 + 开会一体化",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://www.feishu.cn/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "企业微信",
+   "cats": [
+    "30",
+    "31"
+   ],
+   "icon": "🏢",
+   "desc": "客户微信互通，办公用",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://work.weixin.qq.com/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "腾讯会议",
+   "cats": [
+    "30",
+    "31"
+   ],
+   "icon": "🎦",
+   "desc": "开视频会议，国内最常用",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://meeting.tencent.com/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "WPS Office",
+   "cats": [
+    "30",
+    "31"
+   ],
+   "icon": "📄",
+   "desc": "国产办公套件，和 Office 互通",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://www.wps.cn/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "Chrome",
+   "cats": [
+    "30",
+    "32"
+   ],
+   "icon": "🌐",
+   "desc": "谷歌浏览器，插件生态最全",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://www.google.cn/chrome/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "Firefox",
+   "cats": [
+    "30",
+    "32"
+   ],
+   "icon": "🦊",
+   "desc": "火狐浏览器，隐私更硬",
+   "tags": [
+    "开源",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://www.mozilla.org/zh-CN/firefox/new/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "搜狗输入法",
+   "cats": [
+    "30",
+    "32"
+   ],
+   "icon": "⌨️",
+   "desc": "中文输入法，词库大",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://shurufa.sogou.com/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "微信输入法",
+   "cats": [
+    "30",
+    "32"
+   ],
+   "icon": "⌨️",
+   "desc": "无广告输入法，微信出品",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://z.weixin.qq.com/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "百度网盘",
+   "cats": [
+    "30",
+    "32"
+   ],
+   "icon": "☁️",
+   "desc": "国内最常用网盘",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://pan.baidu.com/download",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "阿里云盘",
+   "cats": [
+    "30",
+    "32"
+   ],
+   "icon": "☁️",
+   "desc": "不限速云盘（现名阿里云盘）",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://www.alipan.com/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "夸克网盘",
+   "cats": [
+    "30",
+    "32"
+   ],
+   "icon": "☁️",
+   "desc": "夸克浏览器同款网盘",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://pan.quark.cn/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "迅雷",
+   "cats": [
+    "30",
+    "32"
+   ],
+   "icon": "⚡",
+   "desc": "老牌下载工具，支持磁力",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://www.xunlei.com/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "Steam",
+   "cats": [
+    "30",
+    "33"
+   ],
+   "icon": "🎮",
+   "desc": "全球最大 PC 游戏平台",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://store.steampowered.com/about/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "网易云音乐",
+   "cats": [
+    "30",
+    "33"
+   ],
+   "icon": "🎵",
+   "desc": "歌单和评论区是灵魂",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://music.163.com/",
+     "primary": true
+    }
+   ]
+  },
+  {
+   "name": "QQ音乐",
+   "cats": [
+    "30",
+    "33"
+   ],
+   "icon": "🎶",
+   "desc": "曲库最全的国内音乐平台",
+   "tags": [
+    "免费",
+    "中文"
+   ],
+   "links": [
+    {
+     "label": "官网下载",
+     "url": "https://y.qq.com/",
+     "primary": true
+    }
    ]
   }
  ],
  "groups": [
+  {
+   "id": "g0",
+   "name": "新机开荒",
+   "desc": "新电脑照着装一遍",
+   "color": "#f43f5e",
+   "cats": [
+    "30",
+    "31",
+    "32",
+    "33"
+   ]
+  },
   {
    "id": "g1",
    "name": "常用",
