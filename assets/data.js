@@ -3,73 +3,73 @@ window.TOOLBOX = {
  "cats": [
   {
    "id": "00",
-   "name": "通用基线",
+   "name": "装机必备",
    "desc": "装机先装的四件套",
    "color": "#4f7cff"
   },
   {
    "id": "01",
-   "name": "文献管理",
+   "name": "文献笔记",
    "desc": "查文献、管 PDF、做笔记",
    "color": "#8b5cf6"
   },
   {
    "id": "02",
-   "name": "学术排版",
+   "name": "论文排版",
    "desc": "LaTeX / Typst 一条龙",
    "color": "#0ea5e9"
   },
   {
    "id": "03",
-   "name": "绘图与矢量",
+   "name": "绘图设计",
    "desc": "矢量图、位图、流程图",
    "color": "#ec4899"
   },
   {
    "id": "04",
-   "name": "数值计算",
+   "name": "科学计算",
    "desc": "科学计算与统计分析",
    "color": "#f59e0b"
   },
   {
    "id": "05",
-   "name": "编程与版本控制",
+   "name": "编程开发",
    "desc": "写代码、管版本",
    "color": "#10b981"
   },
   {
    "id": "06",
-   "name": "多媒体创作",
+   "name": "影音三维",
    "desc": "音频、3D、动画",
    "color": "#ef4444"
   },
   {
    "id": "07",
-   "name": "办公套件",
+   "name": "办公字体",
    "desc": "文档表格与中文字体",
    "color": "#06b6d4"
   },
   {
    "id": "10",
-   "name": "安全与清理",
+   "name": "卸载清理",
    "desc": "卸载、清理、查启动项",
    "color": "#64748b"
   },
   {
    "id": "11",
-   "name": "系统增强",
+   "name": "系统工具",
    "desc": "让 Windows 好用一点",
    "color": "#14b8a6"
   },
   {
    "id": "12",
-   "name": "运行库修复",
+   "name": "运行库",
    "desc": "装软件报错缺 DLL 时用",
    "color": "#f97316"
   },
   {
    "id": "13",
-   "name": "AI 客户端",
+   "name": "AI 工具",
    "desc": "接 API 的桌面 AI 工具",
    "color": "#6366f1"
   }

@@ -186,6 +186,82 @@ body {
   vertical-align: 1px;
 }
 
+.side-contact { margin-top: 10px; padding-top: 10px; border-top: 1px dashed var(--line-2); display: flex; flex-direction: column; gap: 6px; }
+.sc-title { font-size: 11.5px; font-weight: 650; color: var(--text); }
+.sc {
+  text-align: left;
+  border: 1px solid var(--line);
+  background: var(--card-2);
+  color: var(--muted);
+  font: inherit;
+  font-size: 12px;
+  padding: 6px 9px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: color .15s ease, border-color .15s ease;
+}
+.sc:hover { color: var(--text); border-color: var(--line-2); }
+
+.clickable { cursor: pointer; }
+.clickable:hover { text-decoration: underline; }
+
+/* ---------- 悬浮「有事找我」 ---------- */
+
+.float-contact { position: fixed; right: 18px; bottom: 18px; z-index: 80; }
+.fc-btn {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 11px 16px;
+  border: 0;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #4f7cff, #7b5cff);
+  color: #fff;
+  font: inherit;
+  font-size: 13.5px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 10px 26px -8px rgba(79, 124, 255, .9);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+.fc-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 30px -8px rgba(79, 124, 255, .95); }
+.fc-pop {
+  position: absolute;
+  right: 0;
+  bottom: calc(100% + 10px);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 190px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--card);
+  box-shadow: var(--shadow-lg);
+}
+.fc-pop[hidden] { display: none; }
+.fc-item {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 9px 11px;
+  border: 0;
+  border-radius: 9px;
+  background: transparent;
+  color: var(--text);
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  text-align: left;
+}
+.fc-item:hover { background: color-mix(in srgb, var(--brand) 10%, transparent); }
+.fc-item span { font-size: 15px; }
+
+@media (max-width: 560px) {
+  .float-contact { right: 12px; bottom: 12px; }
+  .fc-btn { padding: 10px 13px; font-size: 12.5px; }
+}
+
 /* ---------- 顶栏 ---------- */
 
 .topbar {
@@ -312,11 +388,50 @@ html[data-theme="dark"] .icon-btn .i-moon { display: block; }
 
 .hero h1 em {
   font-style: normal;
-  background: linear-gradient(100deg, #4f7cff, #8b5cf6 55%, #ec4899);
+  background-image: linear-gradient(100deg, #4f7cff, #8b5cf6 40%, #ec4899 70%, #4f7cff);
+  background-size: 220% auto;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
+  animation: shine 5s linear infinite;
 }
+
+@keyframes shine { to { background-position: 220% center; } }
+
+.badges { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+
+.badge {
+  font-size: 12px;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--brand) 22%, var(--line));
+  background: color-mix(in srgb, var(--brand) 8%, var(--card));
+  color: color-mix(in srgb, var(--brand) 62%, var(--text));
+  box-shadow: var(--shadow-sm);
+}
+
+.contact-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin-top: 20px; }
+.contact-lead { font-size: 13px; font-weight: 650; color: var(--text); }
+
+.contact-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 7px 11px;
+  border-radius: 11px;
+  border: 1px solid var(--line-2);
+  background: var(--card);
+  color: var(--text);
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  box-shadow: var(--shadow-sm);
+  transition: transform .15s ease, border-color .15s ease;
+}
+.contact-chip:hover { transform: translateY(-1px); border-color: color-mix(in srgb, var(--brand) 45%, var(--line)); }
+.contact-chip .ci { font-size: 14px; }
+.contact-chip i { font-style: normal; font-size: 10.5px; color: var(--faint); margin-left: 3px; }
 
 .lede {
   margin: 14px 0 0;

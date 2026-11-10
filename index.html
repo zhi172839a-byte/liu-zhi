@@ -15,7 +15,7 @@
       <div class="brand-mark">库</div>
       <div class="brand-text">
         <strong>软件工具库</strong>
-        <span>离线版 · 双击就能用</span>
+        <span>官网直链 · 免费开源</span>
       </div>
     </div>
     <nav class="nav" id="nav" aria-label="分类导航"></nav>
@@ -23,6 +23,11 @@
       <span class="dot-ok"></span>
       链接全部来自厂商官网 / 官方 GitHub<br />
       无第三方下载站，无破解包
+      <div class="side-contact">
+        <div class="sc-title">有事找我</div>
+        <button class="sc" data-copy="17393755973" title="点击复制">📞 17393755973</button>
+        <button class="sc" data-copy="Xianyu_xioliu" title="点击复制">💬 微信 Xianyu_xioliu</button>
+      </div>
     </div>
   </aside>
 
@@ -34,9 +39,6 @@
         <input id="q" type="search" placeholder="搜索软件或用途，例如 blender / 压缩 / 字体" autocomplete="off" spellcheck="false" aria-label="搜索软件" />
         <kbd id="kbdHint">/</kbd>
       </div>
-      <button class="add-btn" id="addBtn" type="button" title="添加一个软件">
-        <span class="plus">＋</span><span class="add-label">添加软件</span>
-      </button>
       <button class="icon-btn" id="themeBtn" aria-label="切换深浅色" title="切换深浅色">
         <svg class="i-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"></circle><path d="M12 2.5v2.4M12 19.1v2.4M2.5 12h2.4M19.1 12h2.4M5.2 5.2l1.7 1.7M17.1 17.1l1.7 1.7M18.8 5.2l-1.7 1.7M6.9 17.1l-1.7 1.7"></path></svg>
         <svg class="i-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.2A8.2 8.2 0 0 1 9.8 4a8.4 8.4 0 1 0 10.2 10.2Z"></path></svg>
@@ -47,8 +49,18 @@
       <section class="hero">
         <p class="eyebrow">LOCAL TOOLBOX <span>·</span> UPDATED 2026-11-10</p>
         <h1>常用软件，<em>一个页面找齐</em></h1>
-        <p class="lede">桌面「软件工具库」的网页版：按用途分好类，点开就是官网下载页。全部是免费 / 开源软件，不需要破解。</p>
+        <p class="lede">按用途分好类，点开就是官网下载页。全部是免费 / 开源软件，不需要破解。</p>
+        <div class="badges">
+          <span class="badge">✅ 官网直链</span>
+          <span class="badge">🛡️ 无捆绑 · 无广告</span>
+          <span class="badge">💸 免费 · 开源</span>
+        </div>
         <div class="stats" id="stats"></div>
+        <div class="contact-row">
+          <span class="contact-lead">有事找我 👇</span>
+          <button class="contact-chip" data-copy="17393755973" title="点击复制"><span class="ci">📞</span>17393755973<i>复制</i></button>
+          <button class="contact-chip" data-copy="Xianyu_xioliu" title="点击复制"><span class="ci">💬</span>微信 Xianyu_xioliu<i>复制</i></button>
+        </div>
       </section>
 
       <div id="content" aria-live="polite"></div>
@@ -56,63 +68,19 @@
       <footer class="foot">
         <span>共 <b id="footApps">0</b> 款软件 / <b id="footLinks">0</b> 个链接</span>
         <span class="foot-sep">·</span>
-        <span>点「＋ 添加软件」可以自己加，数据存在本机</span>
+        <span>全部来自厂商官网与官方 GitHub</span>
+        <span class="foot-sep">·</span>
+        <span>有事找我：<b data-copy="17393755973" class="clickable" title="点击复制">17393755973</b> / 微信 <b data-copy="Xianyu_xioliu" class="clickable" title="点击复制">Xianyu_xioliu</b></span>
       </footer>
     </div>
   </main>
 </div>
 
-<!-- 添加 / 编辑软件 -->
-<div class="modal" id="modal" hidden>
-  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-    <header class="modal-head">
-      <h3 id="modalTitle">添加软件</h3>
-      <button class="modal-x" type="button" data-close aria-label="关闭">×</button>
-    </header>
-    <form id="appForm" autocomplete="off">
-      <div class="row2">
-        <label class="field"><span class="lbl">名称 <b class="req">*</b></span>
-          <input name="name" required maxlength="40" placeholder="例如 Figma" />
-        </label>
-        <label class="field"><span class="lbl">分类</span>
-          <select name="cat" id="catSelect"></select>
-        </label>
-      </div>
-
-      <label class="field"><span class="lbl">官网 / 主链接 <b class="req">*</b></span>
-        <input name="url" type="url" required placeholder="https://example.com/download" />
-      </label>
-
-      <label class="field"><span class="lbl">更多链接（可选，每行一个：说明|链接）</span>
-        <textarea name="extra" rows="2" placeholder="历史版本|https://example.com/old&#10;GitHub|https://github.com/xxx/yyy"></textarea>
-      </label>
-
-      <label class="field"><span class="lbl">一句话介绍</span>
-        <input name="desc" maxlength="60" placeholder="例如 在线 UI 设计协作工具" />
-      </label>
-
-      <div class="row2">
-        <label class="field"><span class="lbl">图标（一个 emoji）</span>
-          <input name="icon" maxlength="4" placeholder="🎯" />
-        </label>
-        <label class="field"><span class="lbl">标签（逗号分隔）</span>
-          <input name="tags" maxlength="30" placeholder="免费, 在线" />
-        </label>
-      </div>
-
-      <div class="modal-foot">
-        <div class="data-tools">
-          <button type="button" class="linky" id="exportBtn" title="把你自己添加的软件导出成 JSON，换电脑或发给别人时用">导出我的添加</button>
-          <button type="button" class="linky" id="importBtn" title="导入之前导出的 JSON">导入</button>
-          <input type="file" id="importFile" accept=".json,application/json" hidden />
-        </div>
-        <div class="modal-actions">
-          <button type="button" class="btn ghost" data-close>取消</button>
-          <button type="submit" class="btn primary" id="saveBtn">保存</button>
-        </div>
-      </div>
-      <p class="modal-note" id="modalNote"></p>
-    </form>
+<div class="float-contact" id="floatContact">
+  <button class="fc-btn" id="fcBtn" type="button">📞 有事找我</button>
+  <div class="fc-pop" id="fcPop" hidden>
+    <button class="fc-item" data-copy="17393755973" type="button"><span>📞</span>17393755973</button>
+    <button class="fc-item" data-copy="Xianyu_xioliu" type="button"><span>💬</span>微信 Xianyu_xioliu</button>
   </div>
 </div>
 
