@@ -470,7 +470,7 @@
               '<span class="sec-count">' + items.length + "</span>" +
               '<span class="chev" aria-hidden="true">▾</span>' +
             "</button>" +
-            listHTML(items) +
+            (open ? listHTML(items) : "") +
           "</section>");
       }).join("");
       return;
@@ -540,9 +540,9 @@
     if (tgBtn) {
       var gid = tgBtn.dataset.toggle;
       openGroups[gid] = !openGroups[gid];
-      var sec = tgBtn.closest(".section");
-      if (sec) sec.classList.toggle("collapsed", !openGroups[gid]);
-      tgBtn.setAttribute("aria-expanded", String(!!openGroups[gid]));
+      render();
+      var opened = document.querySelector('[data-toggle="' + gid + '"]');
+      if (opened) opened.focus({ preventScroll: true });
       return;
     }
 
