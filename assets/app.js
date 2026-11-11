@@ -36,9 +36,49 @@
   var state = { view: "all", q: "" };
   var openGroups = {};   // 分组是否展开，默认全部收起
 
+  /* 联系方式脱敏：源码里只存 base64，运行时解码后渲染，爬虫抓不到明文 */
+  var CONTACT = {
+    phone: atob("MTczOTM3NTU5NzM="),
+    wx: atob("WGlhbnl1X3hpb2xpdQ==")
+  };
+  Array.prototype.forEach.call(document.querySelectorAll("[data-contact]"), function (el) {
+    var k = el.getAttribute("data-contact");
+    if (CONTACT[k]) el.textContent = CONTACT[k];
+  });
+
+  /* 路由：#/c/分类ID、#/g/分组ID、#/q/关键词；旧的 ?q= 也兼容 */
+  function hashToState() {
+    var h = (location.hash || "").replace(/^#\/?/, "");
+    if (!h) return null;
+    var p = h.split("/");
+    if (p[0] === "c" && p[1] && CAT[p[1]]) return { view: p[1], q: "" };
+    if (p[0] === "g" && p[1] && GROUPS.some(function (g) { return g.id === p[1]; })) return { view: "g:" + p[1], q: "" };
+    if (p[0] === "q" && p[1]) return { view: "all", q: decodeURIComponent(p.slice(1).join("/")) };
+    if (p[0] === "all") return { view: "all", q: "" };
+    return null;
+  }
+
+  function currentHash() {
+    if (state.q) return "#/q/" + encodeURIComponent(state.q);
+    if (state.view === "all") return "#/";
+    if (state.view.indexOf("g:") === 0) return "#/g/" + state.view.slice(2);
+    return "#/c/" + state.view;
+  }
+
+  function syncHash() {
+    var h = currentHash();
+    if (location.hash === h) return;
+    try { history.replaceState(null, "", h); } catch (e) { location.hash = h; }
+  }
+
   try {
     var initialQ = new URLSearchParams(window.location.search).get("q");
     if (initialQ) { state.q = initialQ; qEl.value = initialQ; }
+  } catch (e) {}
+
+  try {
+    var r0 = hashToState();
+    if (r0) { state.view = r0.view; state.q = r0.q; qEl.value = r0.q; }
   } catch (e) {}
 
   /* ---------- 基础工具 ---------- */
@@ -499,6 +539,25 @@
         : emptyHTML("这个分类还没有软件"));
   }
 
+  /* 每次渲染后把状态同步进地址栏，分类链接就能直接分享 */
+  var _renderCore = render;
+  render = function () {
+    _renderCore();
+    syncHash();
+  };
+
+  window.addEventListener("hashchange", function () {
+    var s = hashToState();
+    if (!s) return;
+    if (state.view === s.view && state.q === s.q) return;
+    state.view = s.view;
+    state.q = s.q;
+    qEl.value = s.q;
+    toggleClear();
+    _renderCore();
+    syncHash();
+  });
+
   /* ---------- 热门关键词 ---------- */
 
   var HOT = ["镜像", "清理C盘", "截图", "播放", "PDF合并", "手机传文件", "剪视频", "杀毒", "密码", "看图"];
@@ -591,6 +650,11 @@
   });
 
   document.addEventListener("click", function (e) {
+    var keyed = e.target.closest("[data-copy-key]");
+    if (keyed) {
+      copyText(CONTACT[keyed.getAttribute("data-copy-key")] || "");
+      return;
+    }
     var c = e.target.closest("[data-copy]");
     if (c) copyText(c.getAttribute("data-copy"));
   });

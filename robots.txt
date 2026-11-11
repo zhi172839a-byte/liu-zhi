@@ -1,0 +1,7 @@
+# 软件工具库 · 允许抓取全部内容
+User-agent: *
+Allow: /
+
+# 分类是用 #/c/xx 这种锚点切换的，搜索引擎不索引锚点，
+# 所以只需要收录首页；sitemap 里也只放了首页。
+Sitemap: https://azhi.shop/sitemap.xml

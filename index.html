@@ -7,8 +7,54 @@
 <meta name="theme-color" content="#f4f6fb" />
 <title>软件工具库 · 常用软件官网直链整理</title>
 <meta name="description" content="常用软件官网直链合集：只收厂商官网与官方 GitHub，无破解、无捆绑、不提供下载，纯人工整理。" />
+<link rel="canonical" href="https://azhi.shop/" />
+<meta name="robots" content="index,follow,max-image-preview:large" />
+<meta name="author" content="治" />
+
+<!-- Open Graph（微信/QQ/微博分享卡片） -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="软件工具库" />
+<meta property="og:locale" content="zh_CN" />
+<meta property="og:title" content="软件工具库 · 常用软件官网直链整理" />
+<meta property="og:description" content="只收厂商官网与官方 GitHub 的常用软件清单，按用途分类，无破解、无捆绑。" />
+<meta property="og:url" content="https://azhi.shop/" />
+<meta property="og:image" content="https://azhi.shop/icons/icon-512.png" />
+<meta property="og:image:width" content="512" />
+<meta property="og:image:height" content="512" />
+
+<!-- Twitter / X -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="软件工具库 · 常用软件官网直链整理" />
+<meta name="twitter:description" content="只收厂商官网与官方 GitHub 的常用软件清单，按用途分类。" />
+<meta name="twitter:image" content="https://azhi.shop/icons/icon-512.png" />
+
+<!-- 结构化数据 -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://azhi.shop/#website",
+      "url": "https://azhi.shop/",
+      "name": "软件工具库",
+      "description": "常用软件官网直链合集，纯人工整理，只收官网。",
+      "inLanguage": "zh-CN",
+      "publisher": { "@type": "Person", "name": "治" }
+    },
+    {
+      "@type": "CollectionPage",
+      "@id": "https://azhi.shop/#page",
+      "url": "https://azhi.shop/",
+      "name": "常用软件，只收官网",
+      "isPartOf": { "@id": "https://azhi.shop/#website" },
+      "about": "常用软件官网直链索引"
+    }
+  ]
+}
+</script>
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='24' fill='%234f7cff'/%3E%3Ctext x='50' y='50' font-size='52' text-anchor='middle' dominant-baseline='central' fill='white' font-family='Segoe UI,Microsoft YaHei'%3E库%3C/text%3E%3C/svg%3E" />
-<link rel="stylesheet" href="assets/styles.css?v=1794323766" />
+<link rel="stylesheet" href="assets/styles.css?v=1794362006" />
 <link rel="manifest" href="manifest.json" />
 <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
 <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -32,8 +78,8 @@
       无第三方下载站，无破解包
       <div class="side-contact">
         <div class="sc-title">有事找我</div>
-        <button class="sc" data-copy="17393755973" title="点击复制">📞 17393755973</button>
-        <button class="sc" data-copy="Xianyu_xioliu" title="点击复制">💬 微信 Xianyu_xioliu</button>
+        <button class="sc" data-copy-key="phone" title="点击复制">📞 <span data-contact="phone"></span></button>
+        <button class="sc" data-copy-key="wx" title="点击复制">💬 微信 <span data-contact="wx"></span></button>
       </div>
     </div>
   </aside>
@@ -78,8 +124,8 @@
         <div class="stats" id="stats"></div>
         <div class="contact-row">
           <span class="contact-lead">有事找我 👇</span>
-          <button class="contact-chip" data-copy="17393755973" title="点击复制"><span class="ci">📞</span>17393755973<i>复制</i></button>
-          <button class="contact-chip" data-copy="Xianyu_xioliu" title="点击复制"><span class="ci">💬</span>微信 Xianyu_xioliu<i>复制</i></button>
+          <button class="contact-chip" data-copy-key="phone" title="点击复制"><span class="ci">📞</span><span data-contact="phone"></span><i>复制</i></button>
+          <button class="contact-chip" data-copy-key="wx" title="点击复制"><span class="ci">💬</span>微信 <span data-contact="wx"></span><i>复制</i></button>
         </div>
         <div class="sign">
           <span class="sign-seal">治</span>
@@ -96,7 +142,7 @@
         <span class="foot-sep">·</span>
         <span>整理 · <b>治</b> · 2026</span>
         <span class="foot-sep">·</span>
-        <span>有事找我：<b data-copy="17393755973" class="clickable" title="点击复制">17393755973</b> / 微信 <b data-copy="Xianyu_xioliu" class="clickable" title="点击复制">Xianyu_xioliu</b></span>
+        <span>有事找我：<b class="clickable" data-copy-key="phone" data-contact="phone" title="点击复制"></b> / 微信 <b class="clickable" data-copy-key="wx" data-contact="wx" title="点击复制"></b></span>
       </footer>
     </div>
   </main>
@@ -105,8 +151,8 @@
 <div class="float-contact" id="floatContact">
   <button class="fc-btn" id="fcBtn" type="button">📞 有事找我</button>
   <div class="fc-pop" id="fcPop" hidden>
-    <button class="fc-item" data-copy="17393755973" type="button"><span>📞</span>17393755973</button>
-    <button class="fc-item" data-copy="Xianyu_xioliu" type="button"><span>💬</span>微信 Xianyu_xioliu</button>
+    <button class="fc-item" data-copy-key="phone" type="button"><span>📞</span><span data-contact="phone"></span></button>
+    <button class="fc-item" data-copy-key="wx" type="button"><span>💬</span>微信 <span data-contact="wx"></span></button>
   </div>
 </div>
 
@@ -114,8 +160,13 @@
 
 <div class="toast" id="toast" role="status"></div>
 
-<script src="assets/data.js?v=1794323766"></script>
-<script src="assets/app.js?v=1794323766"></script>
+<!-- 统计（可选）：推荐 Umami 或 51.LA，不要用 Google Analytics。
+     用法：注册后把下面整段取消注释，填上自己的站点 ID 即可。
+<script async src="https://umami.example.com/script.js" data-website-id="在这里填-website-id"></script>
+-->
+
+<script src="assets/data.js?v=1794362006"></script>
+<script src="assets/app.js?v=1794362006"></script>
 <script>
   if ("serviceWorker" in navigator && location.protocol.indexOf("http") === 0) {
     window.addEventListener("load", function () {

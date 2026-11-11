@@ -2994,15 +2994,16 @@ window.TOOLBOX = {
    ]
   },
   {
-   "name": "PyCharm 社区版",
+   "name": "PyCharm",
    "cats": [
     "05"
    ],
    "icon": "🧠",
-   "desc": "Python 专用 IDE，免费版够用；点第一个直接下 Windows 安装包",
+   "desc": "Python 专用 IDE，免费版够用；学生可申请免费专业版",
    "tags": [
     "免费",
-    "中文"
+    "中文",
+    "学生免费"
    ],
    "links": [
     {
@@ -3014,19 +3015,25 @@ window.TOOLBOX = {
      "label": "官网页面",
      "url": "https://www.jetbrains.com/pycharm/download/",
      "primary": false
+    },
+    {
+     "label": "学生免费申请",
+     "url": "https://www.jetbrains.com/community/education/",
+     "primary": false
     }
    ]
   },
   {
-   "name": "IntelliJ IDEA 社区版",
+   "name": "IntelliJ IDEA",
    "cats": [
     "05"
    ],
    "icon": "☕",
-   "desc": "Java 开发首选，社区版免费；点第一个直接下 Windows 安装包",
+   "desc": "Java 开发首选，社区版免费；学生可申请免费专业版",
    "tags": [
     "免费",
-    "中文"
+    "中文",
+    "学生免费"
    ],
    "links": [
     {
@@ -3037,6 +3044,11 @@ window.TOOLBOX = {
     {
      "label": "官网页面",
      "url": "https://www.jetbrains.com/idea/download/",
+     "primary": false
+    },
+    {
+     "label": "学生免费申请",
+     "url": "https://www.jetbrains.com/community/education/",
      "primary": false
     }
    ]
